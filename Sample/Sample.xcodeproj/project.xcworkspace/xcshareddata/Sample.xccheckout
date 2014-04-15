@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1A086233-9DDD-44B8-819D-970CBD1D8C11</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Sample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C89AF341-146D-4514-8A1C-4065A5BCEB0C</key>
+		<string>http://source.daumcorp.com/private/MobileAdSDK/trunk/MobileAdSDK_iOS</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PublisherSDK/Sample/Sample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C89AF341-146D-4514-8A1C-4065A5BCEB0C</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>C89AF341-146D-4514-8A1C-4065A5BCEB0C</key>
+		<string>http://source.daumcorp.com/private/MobileAdSDK</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://source.daumcorp.com/private/MobileAdSDK/trunk/MobileAdSDK_iOS/PublisherSDK/Sample/Sample.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C89AF341-146D-4514-8A1C-4065A5BCEB0C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
+			<string>branches</string>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
+			<string>tags/MobileAdSDK_iOS/PublisherSDK</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>trunk/MobileAdSDK_iOS/PublisherSDK</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C89AF341-146D-4514-8A1C-4065A5BCEB0C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MobileAdSDK_iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
