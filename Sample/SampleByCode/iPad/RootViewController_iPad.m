@@ -33,7 +33,7 @@
     
     AdamAdView *adView = [AdamAdView sharedAdView];
     if (![adView.superview isEqual:self.view]) {
-        adView.frame = CGRectMake(0.0, 0.0, self.view.bounds.size.width, 48.0);
+        adView.frame = CGRectMake(0.0, 0.0, self.view.bounds.size.width, 50.0);
         adView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         adView.clientId = @"TestClientId";
         [self.view addSubview:adView];
@@ -48,6 +48,13 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+#pragma mark - Manage Statusbar
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 @end

@@ -1,7 +1,7 @@
 //
 //  AdamError.h
 //  AdamPublisher
-//  Version 2.2.2.1
+//  Version 2.3.1
 //
 //  Copyright 2012 Daum Communications. All rights reserved.
 //

@@ -1,7 +1,7 @@
 //
 //  AdamAdWrapperView.m
 //  AdamPublisher
-//  Version 2.3.0
+//  Version 2.3.1
 //
 //  Copyright 2012 Daum Communications. All rights reserved.
 //

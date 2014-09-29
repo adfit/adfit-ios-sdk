@@ -47,4 +47,11 @@
 	return YES;
 }
 
+#pragma mark - Manage Statusbar
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 @end

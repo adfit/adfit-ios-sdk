@@ -5,47 +5,46 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1A086233-9DDD-44B8-819D-970CBD1D8C11</string>
+	<string>D05ADB2F-B495-4102-8FDD-CF0031F2F2CA</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Sample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C89AF341-146D-4514-8A1C-4065A5BCEB0C</key>
-		<string>http://source.daumcorp.com/private/MobileAdSDK/trunk/MobileAdSDK_iOS</string>
+		<key>A1DB79C88B72689EA36255A015F86934B4B8E174</key>
+		<string>github.com:mobilead/mobilead-ios-sdk.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PublisherSDK/Sample/Sample.xcodeproj/project.xcworkspace</string>
+	<string>Sample/Sample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C89AF341-146D-4514-8A1C-4065A5BCEB0C</key>
-		<string>../../../..</string>
-	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>C89AF341-146D-4514-8A1C-4065A5BCEB0C</key>
-		<string>http://source.daumcorp.com/private/MobileAdSDK</string>
+		<key>A1DB79C88B72689EA36255A015F86934B4B8E174</key>
+		<string>../../..</string>
+		<key>FF3C370522C1F3095E3B283896652352736214C5</key>
+		<string>../../../../mobilead-ios-sdk</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://source.daumcorp.com/private/MobileAdSDK/trunk/MobileAdSDK_iOS/PublisherSDK/Sample/Sample.xcodeproj</string>
+	<string>github.com:mobilead/mobilead-ios-sdk.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C89AF341-146D-4514-8A1C-4065A5BCEB0C</string>
+	<string>A1DB79C88B72689EA36255A015F86934B4B8E174</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
-			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
-			<string>branches</string>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
-			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
-			<string>tags/MobileAdSDK_iOS/PublisherSDK</string>
-			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>trunk/MobileAdSDK_iOS/PublisherSDK</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C89AF341-146D-4514-8A1C-4065A5BCEB0C</string>
+			<string>A1DB79C88B72689EA36255A015F86934B4B8E174</string>
 			<key>IDESourceControlWCCName</key>
-			<string>MobileAdSDK_iOS</string>
+			<string>deploy</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FF3C370522C1F3095E3B283896652352736214C5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mobilead-ios-sdk</string>
 		</dict>
 	</array>
 </dict>

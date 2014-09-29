@@ -47,4 +47,11 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+#pragma mark - Manage Statusbar
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 @end

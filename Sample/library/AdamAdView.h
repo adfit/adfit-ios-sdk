@@ -1,7 +1,7 @@
 //
 //  AdamAdView.h
 //  AdamPublisher
-//  Version 2.2.2.1
+//  Version 2.3.1
 //
 //  Copyright 2012 Daum Communications. All rights reserved.
 //
@@ -91,6 +91,14 @@ typedef enum {
  */
 @property (nonatomic, readonly) NSString *sdkVersion;
 
+/**
+ mraid 광고 요청 정보.
+ rootview가 아닐경우 mraid포맷을 요청하지 않도록 한다.
+ 해당 속성에 할당하여 mraid 광고를 선택하여 수신 받을 수 있다.
+ - mraid 광고: @"y"
+ - 일반 광고: @"n"
+ */
+@property (nonatomic, copy) NSString *mraid;
 
 /**
  AdamAdView 클래스의 Singlton 객체인 sharedAdView를 리턴한다.
