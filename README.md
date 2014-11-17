@@ -1,4 +1,4 @@
-# Ad@m iOS Publisher SDK Guide
+# AdFit(Ad@m) iOS Publisher SDK Guide
 
 이 가이드는 iOS Application 에 모바일 광고를 노출하기 위한 광고 데이터요청과 처리 방법을 설명합니다.
 
@@ -13,7 +13,7 @@ Copyright © 2014 Daum Kakao Corp. All Rights Reserved.
 
 ---
 
-## Ad@m 광고 삽입 방법
+## AdFit(Ad@m) 광고 삽입 방법
 
 
 ### 개발환경
@@ -23,15 +23,15 @@ Copyright © 2014 Daum Kakao Corp. All Rights Reserved.
 * iOS Deployment Target: iOS 4.3 이상
 
 
-### Ad@m SDK 구성
+### AdFit(Ad@m) SDK 구성
 
-* libAdamPublisher.a : Ad@m 광고 라이브러리 파일
+* libAdamPublisher.a : AdFit(Ad@m) 광고 라이브러리 파일
 * AdamAdView.h : 라이브러리 사용을 위해 필요한 광고 뷰 클래스 헤더
 * AdamInterstitial.h : 라이브러리 사용을 위해 필요한 interstitial 클래스 헤더
 * AdamError.h: 라이브러리에서 공통으로 사용되는 Error 클래스 헤더
 * AdamAdWrapperView.h : 인터페이스 빌더에서 사용하기 위한 Wrapper 클래스 헤더
 * AdamAdWrapperView.m : 인터페이스 빌더에서 사용하기 위한 Wrapper 클래스 소스
-* Sample : Ad@m SDK를 적용한 샘플 프로젝트
+* Sample : AdFit(Ad@m) SDK를 적용한 샘플 프로젝트
 
 #### 1 단계 : Client ID 발급받기 및 SDK 다운로드
 실제 광고를 수신하고, 수익 창출을 위해서는 mobile.biz.daum.net에서 사이트/앱 등록 후 Client ID를 발급받아야 한다. 아래 URL을 통해 애플리케이션을 등록할 수 있다.
@@ -46,20 +46,20 @@ Copyright © 2014 Daum Kakao Corp. All Rights Reserved.
 다음과 같은 framework가 없다면 추가로 포함시킨다.  
 2.2 버전 부터는 EventKit.framework, EventKitUI.framework, AssetsLibrary.framework이 추가적으로 필요하다. 또한, QuartzCore.framework은 더이상 사용하지 않으므로 제거해도 무방하다.
 
-	- UIKit.framework
-	- Foundation.framework
-	- CoreGraphics.framework
-	- MobileCoreServices.framework
-	- CFNetwork.framework
-	- SystemConfiguration.framework
-	- CoreLocation.framework
-	- CoreTelephony.framework
-	- MediaPlayer.framework
-	- EventKit.framework
-	- EventKitUI.framework
-	- AssetsLibrary.framework
-	- AdSupport.framework
-	- libz.1.2.5.dylib 
+    - UIKit.framework
+    - Foundation.framework
+    - CoreGraphics.framework
+    - MobileCoreServices.framework
+    - CFNetwork.framework
+    - SystemConfiguration.framework
+    - CoreLocation.framework
+    - CoreTelephony.framework
+    - MediaPlayer.framework
+    - EventKit.framework
+    - EventKitUI.framework
+    - AssetsLibrary.framework
+    - AdSupport.framework
+    - libz.1.2.5.dylib 
 
 ![](http://i1.daumcdn.net/svc/original/U03/adam/5417D48B021D670001)
 
@@ -72,10 +72,10 @@ Copyright © 2014 Daum Kakao Corp. All Rights Reserved.
 
 ##### a. 프로그램적인 삽입 방법
 * code 작성을 통해 광고 뷰를 붙이는 방법은 다음의 순서를 따른다.
-	- AdamAdView.h 파일 import 하기
-	- 광고 뷰 생성하기
-	- 광고 뷰 객체에 Client ID 세팅하기
-	- 화면에 광고 뷰 붙이기
+    - AdamAdView.h 파일 import 하기
+    - 광고 뷰 생성하기
+    - 광고 뷰 객체에 Client ID 세팅하기
+    - 화면에 광고 뷰 붙이기
 
 
 AdamAdView 클래스는 Singleton으로 구현되어있어, 하나의 애플리케이션에서 한개의 객체만 사용이 가능하다. 그렇기 때문에 애플리케이션 내의 여러 화면에서 광고를 보여주고자 하는 경우 가장 좋은 방법은 뷰 컨트롤러의 viewWillApper: 또는 viewDidAppear: 메소드 내부에서 광고 뷰를 붙이는 것이다. 만약 하나의 화면에서만 광고를 보여주고자 한다면, viewDidLoad 메소드 내부에서 광고 뷰를 붙여도 무방하다.
@@ -90,34 +90,34 @@ AdamAdView 클래스는 Singleton으로 구현되어있어, 하나의 애플리�
 
 - (void)viewWillAppear:(BOOL)animated
 {
-	[super viewWillAppear:animated];
-	
-	// AdamAdView 객체를 가져온다.
-	AdamAdView *adView = [AdamAdView sharedAdView];
+    [super viewWillAppear:animated];
+    
+    // AdamAdView 객체를 가져온다.
+    AdamAdView *adView = [AdamAdView sharedAdView];
 
-	if (![adView.superview isEqual:self.view]) {
-		   // adView가 self.view에 붙어있는 상태가 아니라면,
-		   // adView에 필요한 속성을 설정한 후 self.view에 붙인다.
-		   adView.frame = CGRectMake(0.0, 0.0, 320.0, 50.0);
-		   adView.clientId = @"TestClientId";
-		   [self.view addSubview:adView];
+    if (![adView.superview isEqual:self.view]) {
+           // adView가 self.view에 붙어있는 상태가 아니라면,
+           // adView에 필요한 속성을 설정한 후 self.view에 붙인다.
+           adView.frame = CGRectMake(0.0, 0.0, 320.0, 50.0);
+           adView.clientId = @"TestClientId";
+           [self.view addSubview:adView];
 
-		   if (!adView.usingAutoRequest) {
-			   // adView가 광고 자동요청 기능을 사용하는 상태가 아니라면,
-			   // 60초 간격으로 광고 자동요청을 시작한다.
-			   [adView startAutoRequestAd:60.0];
-		   }
-	}
+           if (!adView.usingAutoRequest) {
+               // adView가 광고 자동요청 기능을 사용하는 상태가 아니라면,
+               // 60초 간격으로 광고 자동요청을 시작한다.
+               [adView startAutoRequestAd:60.0];
+           }
+    }
 }
 ``` 
 
 ##### b. 인터페이스 빌더를 이용한 삽입 방법
 * 인터페이스 빌더를 이용해 광고 뷰를 붙이는 방법은 다음의 순서를 따른다.  
 이 때에는 반드시 AdamAdWrappperView.h, AdamAdWrapperView.m 파일을 프로젝트에 추가해야 한다.
-	- AdamAdWrapperView.h, AdamAdWrapperView.m 파일 import 하기
-	- AdamAdWrapperView.m 파일에서 광고 뷰 설정하기
-	- 광고 뷰를 붙일 xib 파일에 새로운 뷰 추가하기
-	- 새로 추가한 뷰의 클래스를 AdamAdWrapperView로 지정하기
+    - AdamAdWrapperView.h, AdamAdWrapperView.m 파일 import 하기
+    - AdamAdWrapperView.m 파일에서 광고 뷰 설정하기
+    - 광고 뷰를 붙일 xib 파일에 새로운 뷰 추가하기
+    - 새로 추가한 뷰의 클래스를 AdamAdWrapperView로 지정하기
 
 AdamAdWrapperView.m 파일을 열면 displayAdView라는 메소드가 구현되어있다.  
 이 메소드는 AdamAdWrapperView 객체가 화면에 보여질 때마다 호출되는데, 이 내부에 광고 뷰를 생성하여 붙이는 코드가 작성되어있다. 기 작성된 코드에서 clientId 속성만 자신의 실제 Client ID를 넣어주면 된다. 그 외의 속성에 대한 설정은 문서 뒷부분의 레퍼런스를 참고하여 추가하도록 한다.
@@ -132,26 +132,26 @@ AdamAdWrapperView.m 파일을 열면 displayAdView라는 메소드가 구현되�
 
 - (void)displayAdView
 {
-	AdamAdView *adView = [AdamAdView sharedAdView];
+    AdamAdView *adView = [AdamAdView sharedAdView];
 
-	if (![adView.superview isEqual:self]) {
-		   adView.frame = self.bounds;
-		   adView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-		   adView.clientId = @"TestClientId";
-		   [self addSubview:adView];
+    if (![adView.superview isEqual:self]) {
+           adView.frame = self.bounds;
+           adView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+           adView.clientId = @"TestClientId";
+           [self addSubview:adView];
 
-		   if (!adView.usingAutoRequest) {
-			   [adView startAutoRequestAd:60.0];
-		   }
-	}
+           if (!adView.usingAutoRequest) {
+               [adView startAutoRequestAd:60.0];
+           }
+    }
 }
 
 - (void)didMoveToWindow {
-	[super didMoveToWindow];
+    [super didMoveToWindow];
     
-	if (self.window) {
-		   [self displayAdView];
-	}
+    if (self.window) {
+           [self displayAdView];
+    }
 }
 ``` 
 
@@ -168,10 +168,10 @@ AdamAdWrapperView.m 파일을 열면 displayAdView라는 메소드가 구현되�
 
 #### 5 단계 : 전면형(Interstitial) 광고 호출
 * 전면형 광고를 호출하는 방법은 다음의 순서를 따른다.  
-이 때, 반드시 AdamInterstitial.h 파일을 프로젝트에 포함시켜야 한다.	- AdamInterstitial.h 파일 import 하기
-	- AdamInterstitial 객체 생성하기
-	- AdamInterstitial 객체에 clientId 세팅하기
-	- 전면형 광고 호출하기
+이 때, 반드시 AdamInterstitial.h 파일을 프로젝트에 포함시켜야 한다. - AdamInterstitial.h 파일 import 하기
+    - AdamInterstitial 객체 생성하기
+    - AdamInterstitial 객체에 clientId 세팅하기
+    - 전면형 광고 호출하기
 
 AdamInterstitial 클래스는 전면형 광고를 호출하기 위해 사용하며, Singleton으로 구현되어있다.  
 AdamInterstitial 객체에 필요한 속성을 세팅해준 후 requestAndPresent 메소드를 호출하면 광고를 요청하게 되며, 성공적으로 광고를 수신한 경우 즉시 전체화면에 광고 화면을 노출한다.  
@@ -188,14 +188,14 @@ AdamInterstitial 객체에 필요한 속성을 세팅해준 후 requestAndPresen
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	[super viewDidAppear:animated];
-	
-	// AdamInterstitial 객체를 가져온다.
-	AdamInterstitial *interstitial = [AdInterstitial sharedInterstitial];
-	
-	// interstitial에 필요한 속성을 설정한 후 광고를 호출한다.
-	interstitial.clientId = @"InterstitialTestClientId";
-	[interstitial requestAndPresent];
+    [super viewDidAppear:animated];
+    
+    // AdamInterstitial 객체를 가져온다.
+    AdamInterstitial *interstitial = [AdInterstitial sharedInterstitial];
+    
+    // interstitial에 필요한 속성을 설정한 후 광고를 호출한다.
+    interstitial.clientId = @"InterstitialTestClientId";
+    [interstitial requestAndPresent];
 }
 ``` 
 
@@ -250,7 +250,7 @@ startAutoRequestAd: 메소드를 호출한 이후에는 stopAutoRequestAd 메소
 또한 광고 자동요청을 사용하고 있는 동안에는 reqeustAd, startAutoRequestAd: 메소드를 호출하여도 새로운 광고가 수신되지 않는다.
 
 _Parameter_  
-&nbsp;&nbsp;&nbsp;Interval		광고를 자동으로 요청할 시간 간격.
+&nbsp;&nbsp;&nbsp;Interval      광고를 자동으로 요청할 시간 간격.
 
 ###### stopAutoRequest
 
@@ -371,7 +371,7 @@ startAutoRequest: 메소드를 호출한 이후에는 YES 값을 가지며, stop
 
 SDK 버전 정보.
 
-현재 사용 중인 Ad@m SDK의 버전 문자열을 가진다.
+현재 사용 중인 AdFit(Ad@m) SDK의 버전 문자열을 가진다.
 
 
 
@@ -386,9 +386,9 @@ SDK 버전 정보.
 ```
 //광고 전환효과 스타일.
 typedef enum {
-		AdamAdViewTransitionStyleNone,
-		AdamAdViewTransitionStyleCurl,
-		AdamAdViewTransitionStyleFlip
+        AdamAdViewTransitionStyleNone,
+        AdamAdViewTransitionStyleCurl,
+        AdamAdViewTransitionStyleFlip
 } AdamAdViewTransitionStyle;
 ```
 
@@ -417,7 +417,7 @@ AdamAdViewTransitionStyleFlip: 광고 영역이 반대편으로 뒤집히며 새
 
 _Parameter_
 
-&nbsp;&nbsp;&nbsp;adView		광고 수신 성공 이벤트가 발생한 AdamAdView 객체.
+&nbsp;&nbsp;&nbsp;adView        광고 수신 성공 이벤트가 발생한 AdamAdView 객체.
 
 
 
@@ -434,8 +434,8 @@ error.domain 값이 AdamErrorDomain이라면, error.code 값을 가지고 AdamEr
 
 _Parameter_
 
-&nbsp;&nbsp;&nbsp;adView		광고 수신 실패 이벤트가 발생한 AdamAdView 객체.  
-&nbsp;&nbsp;&nbsp;error		광고 수신에 실패한 원인이 되는 error 객체.
+&nbsp;&nbsp;&nbsp;adView        광고 수신 실패 이벤트가 발생한 AdamAdView 객체.  
+&nbsp;&nbsp;&nbsp;error     광고 수신에 실패한 원인이 되는 error 객체.
 
 
 
@@ -454,7 +454,7 @@ _Parameter_
 
 _Parameter_
 
-&nbsp;&nbsp;&nbsp;adView		광고 페이지 열림 이벤트가 발생한 AdamAdView 객체.
+&nbsp;&nbsp;&nbsp;adView        광고 페이지 열림 이벤트가 발생한 AdamAdView 객체.
 
 ###### didOpenFullScreenAd:
 
@@ -468,7 +468,7 @@ _Parameter_
 
 _Parameter_
 
-&nbsp;&nbsp;&nbsp;adView		광고 페이지 열림 완료 이벤트가 발생한 AdamAdView 객체.
+&nbsp;&nbsp;&nbsp;adView        광고 페이지 열림 완료 이벤트가 발생한 AdamAdView 객체.
 
 ###### willCloseFullScreenAd:
 
@@ -483,7 +483,7 @@ _Parameter_
 
 _Parameter_
 
-&nbsp;&nbsp;&nbsp;adView		광고 페이지 닫힘 이벤트가 발생한 AdamAdView 객체.
+&nbsp;&nbsp;&nbsp;adView        광고 페이지 닫힘 이벤트가 발생한 AdamAdView 객체.
 
 
 
@@ -501,7 +501,7 @@ _Parameter_
 
 _Parameter_
 
-&nbsp;&nbsp;&nbsp;adView		광고 페이지 닫힘 완료 이벤트가 발생한 AdamAdView 객체.
+&nbsp;&nbsp;&nbsp;adView        광고 페이지 닫힘 완료 이벤트가 발생한 AdamAdView 객체.
 
 ###### willResignByAd:
 
@@ -516,7 +516,7 @@ _Parameter_
 
 _Parameter_
 
-&nbsp;&nbsp;&nbsp;adView		백그라운드로 전환 이벤트를 발생시킨 AdamAdView 객체.
+&nbsp;&nbsp;&nbsp;adView        백그라운드로 전환 이벤트를 발생시킨 AdamAdView 객체.
 
 
 
@@ -544,7 +544,7 @@ _Parameter_
 
 AdamInterstitial 클래스의 Singleton 객체인 sharedInterstitial을 리턴한다.
 
-Return 		AdamInterstitial 객체.
+Return      AdamInterstitial 객체.
 
 
 #####*광고 요청 메소드*
@@ -552,7 +552,7 @@ Return 		AdamInterstitial 객체.
 
 
 ```
-	- (void)requestAndPresent
+    - (void)requestAndPresent
 ```
 
 전면형 광고를 요청하고, 요청에 대한 수신이 성공적으로 이루어지면 즉시 화면에 노출한다.
@@ -648,7 +648,7 @@ I Kakao 으로부터 발급받은 client id 문자열.
 
 SDK 버전 정보.
 
-현재 사용 중인 Ad@m SDK의 버전 문자열을 가진다.
+현재 사용 중인 AdFit(Ad@m) SDK의 버전 문자열을 가진다.
 
 
 
@@ -671,7 +671,7 @@ AdamInterstitial 객체와 관련된 이벤트가 전달되는 delegate 메소�
 전면형 광고 수신 성공시 호출되는 메소드.
 
 _Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial		광고 수신 성공 이벤트가 발생한 AdamInterstitial 객체.
+&nbsp;&nbsp;&nbsp;interstitial      광고 수신 성공 이벤트가 발생한 AdamInterstitial 객체.
 
 
 ###### didFailToReceiveInterstitialAd:error:
@@ -686,8 +686,8 @@ _Parameter_
 광고 수신에 실패한 원인을 알고자 하는 경우, error.localizedDescription 값을 출력해보면 된다.
 
 _Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial		광고 수신 실패 이벤트가 발생한 AdamInterstitial 객체.  
-&nbsp;&nbsp;&nbsp;error			광고 수신에 실패한 원인이 되는 error 객체.
+&nbsp;&nbsp;&nbsp;interstitial      광고 수신 실패 이벤트가 발생한 AdamInterstitial 객체.  
+&nbsp;&nbsp;&nbsp;error         광고 수신에 실패한 원인이 되는 error 객체.
 
 
 
@@ -703,7 +703,7 @@ _Parameter_
 전면형 광고가 보여질 때 호출되는 메소드.
 
 _Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial		전면형 광고 열림 이벤트가 발생한 AdamInterstitial 객체.
+&nbsp;&nbsp;&nbsp;interstitial      전면형 광고 열림 이벤트가 발생한 AdamInterstitial 객체.
 
 ###### didOpenInterstitialAd:
 
@@ -715,7 +715,7 @@ _Parameter_
 전면형 광고가 보여진 직후 호출되는 메소드.
 
 _Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial		전면형 광고 열림 완료 이벤트가 발생한 AdamInterstitial 객체.
+&nbsp;&nbsp;&nbsp;interstitial      전면형 광고 열림 완료 이벤트가 발생한 AdamInterstitial 객체.
 
 ###### willCloseInterstitialAd:
 
@@ -727,7 +727,7 @@ _Parameter_
 전면형 광고가 닫힐 때 호출되는 메소드.
 
 _Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial		전면형 광고 닫힘 이벤트가 발생한 AdamInterstitial 객체.
+&nbsp;&nbsp;&nbsp;interstitial      전면형 광고 닫힘 이벤트가 발생한 AdamInterstitial 객체.
 
 ###### didCloseInterstitialAd:
 
@@ -739,7 +739,7 @@ _Parameter_
 전면형 광고가 닫힌 직후 호출되는 메소드.
 
 _Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial		전면형 광고 닫힘 완료 이벤트가 발생한 AdamInterstitial 객체.
+&nbsp;&nbsp;&nbsp;interstitial      전면형 광고 닫힘 완료 이벤트가 발생한 AdamInterstitial 객체.
 
 
 ###### willResignByInterstitialAd:
@@ -754,7 +754,7 @@ _Parameter_
 전면형 광고 내부에서 전화 걸기 또는 앱스토어로 이동 기능이 실행되는 경우, 애플리케이션이 백그라운드로 들어가게 될 때 호출된다.
 
 _Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial		전면형 광고 닫힘 완료 이벤트가 발생한 AdamInterstitial 객체.
+&nbsp;&nbsp;&nbsp;interstitial      전면형 광고 닫힘 완료 이벤트가 발생한 AdamInterstitial 객체.
 
 
 
@@ -768,15 +768,15 @@ _Parameter_
 
 ```
 typedef enum {
-		AdamErrorTypeUnknown,
-		AdamErrorTypeNoFillAd,
-		AdamErrorTypeNoClientId,
-		AdamErrorTypeTooSmallAdView,
-		AdamErrorTypeInvisibleAdView,
-		AdamErrorTypeAlreadyUsingAutoRequest,
-		AdamErrorTypeTooShortRequestInterval,
-		AdamErrorTypePreviousRequestNotFinished,
-		AdamErrorTypeOpenedAdExists
+        AdamErrorTypeUnknown,
+        AdamErrorTypeNoFillAd,
+        AdamErrorTypeNoClientId,
+        AdamErrorTypeTooSmallAdView,
+        AdamErrorTypeInvisibleAdView,
+        AdamErrorTypeAlreadyUsingAutoRequest,
+        AdamErrorTypeTooShortRequestInterval,
+        AdamErrorTypePreviousRequestNotFinished,
+        AdamErrorTypeOpenedAdExists
 } AdamErrorType;
 ```  
 - AdamErrorTypeUnknown: 원인을 알 수 없는 에러.  
@@ -803,8 +803,7 @@ AdamAdView 객체에서 광고 수신 실패시에는 AdamAdViewDelegate 프로�
 - **원인**:  
 광고를 정상적으로 요청하였으나, 광고 서버에서 보내줄 수 있는 유효 광고가 없을 경우 발생한다. 또는 유효하지 않은 Client ID를 설정한 경우에도 발생한다.
 - **처리 방법**:  
-배너 광고의 경우에는 [http://mobile.biz.daum.net](http://mobile.biz.daum.net) 에서 ‘사이트/앱 등록’ 메뉴에 접속하면 ‘하우스애드’를 등록할 수 있다. 하우스애드란 자신의 앱에 자체 광고를 노출할 수 있는 기능으로, 광고 서버에서 유효 광고를 보내줄 수 없는 경우 자신이 등록한 하우스애드가 수신된다.  
-Interstitial 광고의 경우에는 하우스 애드가 지원되지 않으므로, 일정 시간 이후 다시 호출해본다.
+일정 시간 이후 다시 호출해본다.
 
 
 #### Q2. No Client Id (AdamAdView / AdamInterstitial 공통)
