@@ -1,10 +1,10 @@
-# AdFit(Ad@m) iOS Publisher SDK Guide
+# AdFit(Ad@m) iOS SDK Guide
 
 이 가이드는 iOS Application 에 모바일 광고를 노출하기 위한 광고 데이터요청과 처리 방법을 설명합니다.
 
 사이트/앱 운영정책에 어긋나는 경우 적립금 지급이 거절 될 수 있으니 유의하시기 바랍니다.
 
-* 문의 고객센터 [http://cs.daum.net/mail/form/256.html](http://cs.daum.net/mail/form/256.html)
+* 문의 고객센터 [https://cs.daum.net/question/256.html](https://cs.daum.net/question/256.html)
 * 사이트/앱 운영 정책 [http://adfit.biz.daum.net/html/use.html](http://adfit.biz.daum.net/html/use.html )
 
 이 문서는 Daum Kakao 신디케이션 제휴 당사자에 한해 제공되는 자료로 가이드 라인을 포함한 모든 자료의 지적재산권은 주식회사 다음카카오가 보유합니다.
@@ -33,9 +33,9 @@ Copyright © 2014 Daum Kakao Corp. All Rights Reserved.
 * AdamAdWrapperView.m : 인터페이스 빌더에서 사용하기 위한 Wrapper 클래스 소스
 * Sample : AdFit(Ad@m) SDK를 적용한 샘플 프로젝트
 
-#### 1 단계 : Client ID 발급받기 및 SDK 다운로드
-실제 광고를 수신하고, 수익 창출을 위해서는 mobile.biz.daum.net에서 사이트/앱 등록 후 Client ID를 발급받아야 한다. 아래 URL을 통해 애플리케이션을 등록할 수 있다.
-[http://mobile.biz.daum.net/guide/guide_siteapp1.jsp](http://mobile.biz.daum.net/guide/guide_siteapp1.jsp)
+#### 1 단계 : 광고단위ID(Client ID) 발급받기 및 SDK 다운로드
+실제 광고를 수신하고, 수익 창출을 위해서는 http://adfit.biz.daum.net에서 매체 등록 후 광고단위ID(Client ID)를 발급받아야 한다. 아래 URL을 통해 애플리케이션을 등록할 수 있다.
+[http://adfit.biz.daum.net](http://adfit.biz.daum.net)
 
 애플리케이션 등록 후 SDK를 다운로드 받는다.
 
@@ -74,7 +74,7 @@ Copyright © 2014 Daum Kakao Corp. All Rights Reserved.
 * code 작성을 통해 광고 뷰를 붙이는 방법은 다음의 순서를 따른다.
     - AdamAdView.h 파일 import 하기
     - 광고 뷰 생성하기
-    - 광고 뷰 객체에 Client ID 세팅하기
+    - 광고 뷰 객체에 광고단위ID 세팅하기
     - 화면에 광고 뷰 붙이기
 
 
@@ -99,7 +99,7 @@ AdamAdView 클래스는 Singleton으로 구현되어있어, 하나의 애플리�
            // adView가 self.view에 붙어있는 상태가 아니라면,
            // adView에 필요한 속성을 설정한 후 self.view에 붙인다.
            adView.frame = CGRectMake(0.0, 0.0, 320.0, 50.0);
-           adView.clientId = @"TestClientId";
+           adView.clientId = @"{광고단위ID}";
            [self.view addSubview:adView];
 
            if (!adView.usingAutoRequest) {
@@ -120,7 +120,7 @@ AdamAdView 클래스는 Singleton으로 구현되어있어, 하나의 애플리�
     - 새로 추가한 뷰의 클래스를 AdamAdWrapperView로 지정하기
 
 AdamAdWrapperView.m 파일을 열면 displayAdView라는 메소드가 구현되어있다.  
-이 메소드는 AdamAdWrapperView 객체가 화면에 보여질 때마다 호출되는데, 이 내부에 광고 뷰를 생성하여 붙이는 코드가 작성되어있다. 기 작성된 코드에서 clientId 속성만 자신의 실제 Client ID를 넣어주면 된다. 그 외의 속성에 대한 설정은 문서 뒷부분의 레퍼런스를 참고하여 추가하도록 한다.
+이 메소드는 AdamAdWrapperView 객체가 화면에 보여질 때마다 호출되는데, 이 내부에 광고 뷰를 생성하여 붙이는 코드가 작성되어있다. 기 작성된 코드에서 clientId 속성만 자신의 실제 광고단위ID를 넣어주면 된다. 그 외의 속성에 대한 설정은 문서 뒷부분의 레퍼런스를 참고하여 추가하도록 한다.
 
 ``` objectivec
 //  AdamAdWrapperView.m
@@ -137,7 +137,7 @@ AdamAdWrapperView.m 파일을 열면 displayAdView라는 메소드가 구현되�
     if (![adView.superview isEqual:self]) {
            adView.frame = self.bounds;
            adView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-           adView.clientId = @"TestClientId";
+           adView.clientId = @"{광고단위ID}";
            [self addSubview:adView];
 
            if (!adView.usingAutoRequest) {
@@ -170,7 +170,7 @@ AdamAdWrapperView.m 파일을 열면 displayAdView라는 메소드가 구현되�
 * 전면형 광고를 호출하는 방법은 다음의 순서를 따른다.  
 이 때, 반드시 AdamInterstitial.h 파일을 프로젝트에 포함시켜야 한다. - AdamInterstitial.h 파일 import 하기
     - AdamInterstitial 객체 생성하기
-    - AdamInterstitial 객체에 clientId 세팅하기
+    - AdamInterstitial 객체에 광고단위ID 세팅하기
     - 전면형 광고 호출하기
 
 AdamInterstitial 클래스는 전면형 광고를 호출하기 위해 사용하며, Singleton으로 구현되어있다.  
@@ -194,7 +194,7 @@ AdamInterstitial 객체에 필요한 속성을 세팅해준 후 requestAndPresen
     AdamInterstitial *interstitial = [AdInterstitial sharedInterstitial];
     
     // interstitial에 필요한 속성을 설정한 후 광고를 호출한다.
-    interstitial.clientId = @"InterstitialTestClientId";
+    interstitial.clientId = @"{광고단위ID}";
     [interstitial requestAndPresent];
 }
 ``` 
@@ -283,11 +283,10 @@ delegate 객체가 해제될 때에는 이 속성에 nil 또는 새로운 delega
 @property (nonatomic, copy) NSString *clientId
 ```
 
-Daum Kakao 으로부터 발급받은 client id 문자열.
+Daum Kakao AdFit 으로부터 발급받은 광고단위ID 문자열.
 
-필수 속성이며, 정상적인 client id를 할당하지 않는 경우 유효 광고 수신이 불가능하다.  
-샘플 코드에서는 TestClientId 문자열을 사용하나, 이것은 테스트 용도로만 사용해야 한다.  
-또한 이 값은 적립금을 쌓는 기준이 되기 때문에, 애플리케이션 배포 전에 발급받은 client id를 정확히 입력했는지 반드시 확인해야 한다.
+필수 속성이며, 정상적인 광고단위ID를 할당하지 않는 경우 유효 광고 수신이 불가능하다.  
+또한 이 값은 적립금을 쌓는 기준이 되기 때문에, 애플리케이션 배포 전에 발급받은 광고단위ID를 정확히 입력했는지 반드시 확인해야 한다.
 
 ###### superViewController
 
@@ -590,11 +589,10 @@ delegate 객체가 해제될 때에는 이 속성에 nil 또는 새로운 delega
 @property (nonatomic, retain) NSString *clientId
 ```
 
-I Kakao 으로부터 발급받은 client id 문자열.
+Daum Kakao AdFit으로부터 발급받은 광고단위ID 문자열.
 
-필수 속성이며, 정상적인 client id를 할당하지 않는 경우 유효 광고 수신이 불가능하다.  
-샘플 코드에서는 InterstitialTestClientId 문자열을 사용하나, 이것은 테스트 용도로만 사용해야 한다.  
-또한 이 값은 적립금을 쌓는 기준이 되기 때문에, 애플리케이션 배포 전에 발급받은 client id를 정확히 입력했는지 반드시 확인해야 한다.
+필수 속성이며, 정상적인 광고단위ID를 할당하지 않는 경우 유효 광고 수신이 불가능하다.  
+또한 이 값은 적립금을 쌓는 기준이 되기 때문에, 애플리케이션 배포 전에 발급받은 광고단위ID를 정확히 입력했는지 반드시 확인해야 한다.
 
 ###### superViewController
 
@@ -781,7 +779,7 @@ typedef enum {
 ```  
 - AdamErrorTypeUnknown: 원인을 알 수 없는 에러.  
 - AdamErrorTypeNoFillAd: 현재 노출 가능한 광고가 없음.  
-- AdamErrorTypeNoClientId: ClientId가 설정되지 않았음.  
+- AdamErrorTypeNoClientId: 광고단위ID가 설정되지 않았음.  
 - AdamErrorTypeTooSmallAdView: 광고 뷰의 크기가 기준보다 작음.  
 - AdamErrorTypeInvisibleAdView: 광고 뷰가 화면에 보여지지 않고 있음.  
 - AdamErrorTypeAlreadyUsingAutoRequest: 이미 광고 자동요청 기능을 사용하고 있는 상태임.  
@@ -801,7 +799,7 @@ AdamAdView 객체에서 광고 수신 실패시에는 AdamAdViewDelegate 프로�
 - **domain**: AdamErrorDomain
 - **code**: AdamErrorTypeNoFillAd
 - **원인**:  
-광고를 정상적으로 요청하였으나, 광고 서버에서 보내줄 수 있는 유효 광고가 없을 경우 발생한다. 또는 유효하지 않은 Client ID를 설정한 경우에도 발생한다.
+광고를 정상적으로 요청하였으나, 광고 서버에서 보내줄 수 있는 유효 광고가 없을 경우 발생한다. 또는 유효하지 않은 광고단위ID를 설정한 경우에도 발생한다.
 - **처리 방법**:  
 일정 시간 이후 다시 호출해본다.
 
@@ -812,7 +810,7 @@ AdamAdView 객체에서 광고 수신 실패시에는 AdamAdViewDelegate 프로�
 - **원인**:  
 AdamAdView 또는 AdamInterstitial 객체의 clientId 속성을 지정하지 않고 광고를 호출한 경우 발생한다.
 - **처리 방법**:  
-AdamAdView 또는 AdamInterstitial 객체의 clientId 속성에 발급받은 Client ID문자열을 정확하게 할당한다.
+AdamAdView 또는 AdamInterstitial 객체의 clientId 속성에 발급받은 광고단위ID 문자열을 정확하게 할당한다.
 
 #### Q3. Too Small Ad View (AdamAdView)
 - **domain**: AdamErrorDomain
