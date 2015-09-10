@@ -33,6 +33,22 @@ Copyright © 2014 Daum Kakao Corp. All Rights Reserved.
 * AdamAdWrapperView.m : 인터페이스 빌더에서 사용하기 위한 Wrapper 클래스 소스
 * Sample : AdFit(Ad@m) SDK를 적용한 샘플 프로젝트
 
+
+### * iOS9 [ATS(App Transport Security)](https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/) 처리
+
+애플은 iOS9에서 ATS(App Transport Security)라는 기능을 제공합니다. 기기에서 ATS 활성화 시 암호화된 HTTPS 방식만 허용됩니다.<br>
+HTTPS 방식을 적용하지 않을 경우 애플 보안 기준을 충족하지 않는다는 이유로 광고가 차단될 수 있습니다.
+
+현재 AdFit과 연동된 모든 광고플랫폼에서 HTTPS가 지원되는 것이 아니므로 아래의 사항을 앱의 Info.plist 파일에 적용하여 주시기 바랍니다. 
+
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+```
+
 #### 1 단계 : 광고단위ID(Client ID) 발급받기 및 SDK 다운로드
 실제 광고를 수신하고, 수익 창출을 위해서는 http://adfit.biz.daum.net에서 매체 등록 후 광고단위ID(Client ID)를 발급받아야 한다. 아래 URL을 통해 애플리케이션을 등록할 수 있다.
 [http://adfit.biz.daum.net](http://adfit.biz.daum.net)
