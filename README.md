@@ -7,9 +7,9 @@
 * 문의 고객센터 [https://cs.daum.net/question/256.html](https://cs.daum.net/question/256.html)
 * 사이트/앱 운영 정책 [http://adfit.biz.daum.net/html/use.html](http://adfit.biz.daum.net/html/use.html )
 
-이 문서는 Daum Kakao 신디케이션 제휴 당사자에 한해 제공되는 자료로 가이드 라인을 포함한 모든 자료의 지적재산권은 주식회사 다음카카오가 보유합니다.
+이 문서는 Kakao 신디케이션 제휴 당사자에 한해 제공되는 자료로 가이드 라인을 포함한 모든 자료의 지적재산권은 주식회사 카카오가 보유합니다.
 
-Copyright © 2014 Daum Kakao Corp. All Rights Reserved.
+Copyright © Kakao Corp. All Rights Reserved.
 
 ---
 
@@ -299,7 +299,7 @@ delegate 객체가 해제될 때에는 이 속성에 nil 또는 새로운 delega
 @property (nonatomic, copy) NSString *clientId
 ```
 
-Daum Kakao AdFit 으로부터 발급받은 광고단위ID 문자열.
+AdFit 으로부터 발급받은 광고단위ID 문자열.
 
 필수 속성이며, 정상적인 광고단위ID를 할당하지 않는 경우 유효 광고 수신이 불가능하다.  
 또한 이 값은 적립금을 쌓는 기준이 되기 때문에, 애플리케이션 배포 전에 발급받은 광고단위ID를 정확히 입력했는지 반드시 확인해야 한다.
@@ -605,7 +605,7 @@ delegate 객체가 해제될 때에는 이 속성에 nil 또는 새로운 delega
 @property (nonatomic, retain) NSString *clientId
 ```
 
-Daum Kakao AdFit으로부터 발급받은 광고단위ID 문자열.
+AdFit으로부터 발급받은 광고단위ID 문자열.
 
 필수 속성이며, 정상적인 광고단위ID를 할당하지 않는 경우 유효 광고 수신이 불가능하다.  
 또한 이 값은 적립금을 쌓는 기준이 되기 때문에, 애플리케이션 배포 전에 발급받은 광고단위ID를 정확히 입력했는지 반드시 확인해야 한다.
