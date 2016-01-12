@@ -35,7 +35,7 @@
     if (![adView.superview isEqual:self.view]) {
         adView.frame = CGRectMake(0.0, 0.0, self.view.bounds.size.width, 50.0);
         adView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        adView.clientId = @"TestClientId";
+        adView.clientId = @"DAN-ursep2xzotib";
         [self.view addSubview:adView];
         
         if (!adView.usingAutoRequest) {
