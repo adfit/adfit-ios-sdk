@@ -62,19 +62,22 @@ HTTPS 방식을 적용하지 않을 경우 애플 보안 기준을 충족하지 
 다음과 같은 framework가 없다면 추가로 포함시킨다.  
 2.2 버전 부터는 EventKit.framework, EventKitUI.framework, AssetsLibrary.framework이 추가적으로 필요하다. 또한, QuartzCore.framework은 더이상 사용하지 않으므로 제거해도 무방하다.
 
-    - UIKit.framework
-    - Foundation.framework
-    - CoreGraphics.framework
-    - MobileCoreServices.framework
+    - AdSupport.framework
+    - AssetsLibrary.framework
     - CFNetwork.framework
-    - SystemConfiguration.framework
+    - CoreGraphics.framework
     - CoreLocation.framework
     - CoreTelephony.framework
-    - MediaPlayer.framework
     - EventKit.framework
     - EventKitUI.framework
-    - AssetsLibrary.framework
-    - AdSupport.framework
+    - Foundation.framework
+    - MediaPlayer.framework
+    - MobileCoreServices.framework
+    - UIKit.framework
+    - Security.framework
+    - SystemConfiguration.framework
+    
+    
     - libz.1.2.5.dylib 
 
 ![](http://i1.daumcdn.net/svc/original/U03/adam/5417D48B021D670001)

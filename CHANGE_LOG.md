@@ -1,7 +1,14 @@
 # 변경이력
 
-## v2.3.1
-* iOS 8 추가 대응 및 UI 개선
+## v2.4.0
+* iOS 10 대응
+* HTTPS 대응
+* UDID 개선 
+* 추가 Framework 필요
+    - Security.framework 
+* Bug fix
+
+## v2.3.1가* iOS 8 추가 대응 및 UI 개선
 * 전면형 광고 지원
 * Bug fix
 

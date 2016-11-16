@@ -62,6 +62,8 @@
 		28C4D88E15000EAC00ED06E8 /* adam_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 28C4D87B15000A7000ED06E8 /* adam_title.png */; };
 		28F4745817BB437D00A06DE7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F4745717BB437D00A06DE7 /* AdSupport.framework */; };
 		28F4745917BB441700A06DE7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F4745717BB437D00A06DE7 /* AdSupport.framework */; };
+		52368AC31DDC2D48006816F0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52368AC21DDC2D48006816F0 /* Security.framework */; };
+		52368AC41DDC2D8B006816F0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52368AC21DDC2D48006816F0 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +125,7 @@
 		28F6544714FE41B800082B3C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		28F6544914FE41C100082B3C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		28F6544B14FE41C600082B3C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		52368AC21DDC2D48006816F0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52368AC31DDC2D48006816F0 /* Security.framework in Frameworks */,
 				28F4745817BB437D00A06DE7 /* AdSupport.framework in Frameworks */,
 				28B10346153601D6006513DE /* libAdamPublisher.a in Frameworks */,
 				28C4D81514FFFE2E00ED06E8 /* UIKit.framework in Frameworks */,
@@ -152,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52368AC41DDC2D8B006816F0 /* Security.framework in Frameworks */,
 				28C4D87F15000AE400ED06E8 /* CFNetwork.framework in Frameworks */,
 				28C4D88015000AE600ED06E8 /* MobileCoreServices.framework in Frameworks */,
 				28C4D88115000AEA00ED06E8 /* CoreTelephony.framework in Frameworks */,
@@ -315,6 +320,7 @@
 		28F6540014FE3FB400082B3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52368AC21DDC2D48006816F0 /* Security.framework */,
 				28F4745717BB437D00A06DE7 /* AdSupport.framework */,
 				2855514F16E4A2C000C754D9 /* AssetsLibrary.framework */,
 				2855514B16E4A1E600C754D9 /* EventKit.framework */,

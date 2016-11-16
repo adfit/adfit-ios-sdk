@@ -1,7 +1,7 @@
 //
 //  AdamAdWrapperView.m
 //  AdamPublisher
-//  Version 2.3.1
+//  Version 2.4.0
 //
 //  Copyright 2012 Daum Communications. All rights reserved.
 //
@@ -17,7 +17,7 @@
     if (![adView.superview isEqual:self]) {
         adView.frame = self.bounds;
         adView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        adView.clientId = @"DAN-ursep2xzotib";
+        adView.clientId = @"TestClientId";
         [self addSubview:adView];
         
         if (!adView.usingAutoRequest) {
