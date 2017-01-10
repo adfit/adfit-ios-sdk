@@ -27,7 +27,6 @@ Copyright © Kakao Corp. All Rights Reserved.
 
 * libAdamPublisher.a : AdFit(Ad@m) 광고 라이브러리 파일
 * AdamAdView.h : 라이브러리 사용을 위해 필요한 광고 뷰 클래스 헤더
-* AdamInterstitial.h : 라이브러리 사용을 위해 필요한 interstitial 클래스 헤더
 * AdamError.h: 라이브러리에서 공통으로 사용되는 Error 클래스 헤더
 * AdamAdWrapperView.h : 인터페이스 빌더에서 사용하기 위한 Wrapper 클래스 헤더
 * AdamAdWrapperView.m : 인터페이스 빌더에서 사용하기 위한 Wrapper 클래스 소스
@@ -184,39 +183,6 @@ AdamAdWrapperView.m 파일을 열면 displayAdView라는 메소드가 구현되�
 
 ![](http://i1.daumcdn.net/svc/original/U03/adam/5417D5B004133C0001)
 
-
-#### 5 단계 : 전면형(Interstitial) 광고 호출
-* 전면형 광고를 호출하는 방법은 다음의 순서를 따른다.  
-이 때, 반드시 AdamInterstitial.h 파일을 프로젝트에 포함시켜야 한다. - AdamInterstitial.h 파일 import 하기
-    - AdamInterstitial 객체 생성하기
-    - AdamInterstitial 객체에 광고단위ID 세팅하기
-    - 전면형 광고 호출하기
-
-AdamInterstitial 클래스는 전면형 광고를 호출하기 위해 사용하며, Singleton으로 구현되어있다.  
-AdamInterstitial 객체에 필요한 속성을 세팅해준 후 requestAndPresent 메소드를 호출하면 광고를 요청하게 되며, 성공적으로 광고를 수신한 경우 즉시 전체화면에 광고 화면을 노출한다.  
-광고를 호출하는 시점에는 제한이 없으나, 사용자가 애플리케이션을 사용하는데 큰 지장을 초래하지 않도록 배려해야 한다. (예: 게임 플레이 도중 전면형 광고 노출하는 경우)  
-전면형 광고의 최소 재호출 간격은 3분이며, 수신 성공/실패 여부에 관계없이 3분간은 전면형 광고를 다시 호출 할 수 없다.
-
-``` objectivec
-//  ViewController.m
-
-#import "ViewController.h"
-#import "AdamInterstitial.h"
-
-@implementation ViewController
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    // AdamInterstitial 객체를 가져온다.
-    AdamInterstitial *interstitial = [AdInterstitial sharedInterstitial];
-    
-    // interstitial에 필요한 속성을 설정한 후 광고를 호출한다.
-    interstitial.clientId = @"{광고단위ID}";
-    [interstitial requestAndPresent];
-}
-``` 
 
 ### Class Reference
 
@@ -538,243 +504,6 @@ _Parameter_
 
 
 
-
-
-
-
-
-
-
-
-
-#### AdamInterstitial
---- 
-
-
-
-#####*객체 생성 메소드*
-###### sharedInterstitial
-
-
-```
-+ (AdamInterstitial *)sharedInterstitial
-```
-
-AdamInterstitial 클래스의 Singleton 객체인 sharedInterstitial을 리턴한다.
-
-Return      AdamInterstitial 객체.
-
-
-#####*광고 요청 메소드*
-###### requestAndPresent
-
-
-```
-    - (void)requestAndPresent
-```
-
-전면형 광고를 요청하고, 요청에 대한 수신이 성공적으로 이루어지면 즉시 화면에 노출한다.
-
-최소 호출 간격은 3분이며, 이전 요청의 성공/실패 여부와 상관없이 3분 이내에는 다시 호출할 수 없다.
-
-
-
-
-
-
-
-
-
-
-
-#####*Properties*
-###### delegate
-
-
-```
-@property (nonatomic, assign) id <AdamInterstitialDelegate> delegate
-```
-
-AdamInterstitialDelegate 프로토콜을 구현한 delegate 객체.
-
-AdamInterstitialDelegate 프로토콜의 모든 메소드는 optional이므로, 해당 메소드들을 사용하지 않는다면 할당하지 않아도 무방하다.  
-일단 delegate 객체를 할당한 이후에는 해당 객체가 메모리에서 해제되지 않도록 주의해야 한다.  
-delegate 객체가 해제될 때에는 이 속성에 nil 또는 새로운 delegate 객체를 할당해주어야 하며, 그렇지 않은 경우 애플리케이션의 Crash를 유발할 수 있다.
-
-###### clientId
-
-
-```
-@property (nonatomic, retain) NSString *clientId
-```
-
-AdFit으로부터 발급받은 광고단위ID 문자열.
-
-필수 속성이며, 정상적인 광고단위ID를 할당하지 않는 경우 유효 광고 수신이 불가능하다.  
-또한 이 값은 적립금을 쌓는 기준이 되기 때문에, 애플리케이션 배포 전에 발급받은 광고단위ID를 정확히 입력했는지 반드시 확인해야 한다.
-
-###### superViewController
-
-
-```
-@property (nonatomic, retain) UIViewController *superViewController
-```
-
-광고 수신 성공시 광고 페이지를 modalViewController로 화면에 보여줄 부모 뷰 컨트롤러.
-
-이 속성을 따로 설정해주지 않더라도 SDK 내부적으로 적절한 뷰 컨트롤러를 탐색하여 사용하도록 처리되어있다. 따라서 특별한 경우가 아니라면 별도로 뷰 컨트롤러 객체를 할당해주지 않아도 무방하다.
-
-
-
-
-
-
-###### birth
-
-
-```
-@property (nonatomic, copy) NSString *birth
-```
-
-앱 사용자의 생년월일 정보.
-
-앱 내부에서 사용자의 생년월일 정보를 가지는 경우, birth 속성에 할당하여 타겟팅 광고를 수신 받을 수 있다. 다음과 같은 포맷의 문자열만 할당 가능하며, 유효하지 않은 포맷으로 할당한 경우 무시된다.  
-생년월일 정보를 모두 가진 경우: @”yyyyMMdd”  
-연도 정보만 가진 경우: @”yyyy----”  
-생일 정보만 가진 경우: @”----MMdd”
-
-###### gender
-
-
-```
-@property (nonatomic, copy) NSString *gender
-```
-
-앱 사용자의 성별 정보.
-
-앱 내부에서 사용자의 성별 정보를 가지는 경우, gender 속성에 할당하여 타겟팅 광고를 수신 받을 수 있다. 다음과 같은 포맷의 문자열만 할당 가능하며, 유효하지 않은 포맷으로 할당한 경우 무시된다.  
-남성: @”M”  
-여성: @”F”
-
-###### sdkVersion
-
-
-```
-@property (nonatomic, readonly) NSString *sdkVersion
-```
-
-SDK 버전 정보.
-
-현재 사용 중인 AdFit(Ad@m) SDK의 버전 문자열을 가진다.
-
-
-
-
-
-#### AdamInterstitialDelegate
---- 
-
-AdamInterstitial 객체와 관련된 이벤트가 전달되는 delegate 메소드들이 선언되어있다. 모든 메소드들은 optional이므로, 이 메소드들을 사용하지 않는 경우 AdamInterstitialDelegate 프로토콜을 따로 구현해야 할 필요는 없다.
-
-
-#####*광고 수신 / 실패 관련 delegate 메소드*
-###### didReceiveInterstitialAd:
-
-
-```
-- (void)didReceiveInterstitialAd:(AdamInterstitial *)interstitial
-```
-
-전면형 광고 수신 성공시 호출되는 메소드.
-
-_Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial      광고 수신 성공 이벤트가 발생한 AdamInterstitial 객체.
-
-
-###### didFailToReceiveInterstitialAd:error:
-
-
-```
-- (void)didFailToReceiveInterstitialAd:(AdamInterstitial *)interstitial error:(NSError *)error
-```
-
-전면형 광고 수신 실패시 호출되는 메소드.
-
-광고 수신에 실패한 원인을 알고자 하는 경우, error.localizedDescription 값을 출력해보면 된다.
-
-_Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial      광고 수신 실패 이벤트가 발생한 AdamInterstitial 객체.  
-&nbsp;&nbsp;&nbsp;error         광고 수신에 실패한 원인이 되는 error 객체.
-
-
-
-
-#####*광고 노출 관련 delegate 메소드*
-###### willOpenInterstitialAd:
-
-
-```
-- (void)willOpenInterstitialAd:(AdamInterstitial *)interstitial
-```
-
-전면형 광고가 보여질 때 호출되는 메소드.
-
-_Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial      전면형 광고 열림 이벤트가 발생한 AdamInterstitial 객체.
-
-###### didOpenInterstitialAd:
-
-
-```
-- (void)didOpenInterstitialAd:(AdamInterstitial *)interstitial
-```
-
-전면형 광고가 보여진 직후 호출되는 메소드.
-
-_Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial      전면형 광고 열림 완료 이벤트가 발생한 AdamInterstitial 객체.
-
-###### willCloseInterstitialAd:
-
-
-```
-- (void)willCloseInterstitialAd:(AdamInterstitial *)interstitial
-```
-
-전면형 광고가 닫힐 때 호출되는 메소드.
-
-_Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial      전면형 광고 닫힘 이벤트가 발생한 AdamInterstitial 객체.
-
-###### didCloseInterstitialAd:
-
-
-```
-- (void)didCloseInterstitialAd:(AdamInterstitial *)interstitial
-```
-
-전면형 광고가 닫힌 직후 호출되는 메소드.
-
-_Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial      전면형 광고 닫힘 완료 이벤트가 발생한 AdamInterstitial 객체.
-
-
-###### willResignByInterstitialAd:
-
-
-```
-- (void)willResignByInterstitialAd:(AdamInterstitial *)interstitial
-```
-
-전면형 광고 내부의 인터랙션에 의해 애플리케이션이 종료될 때 호출되는 메소드.
-
-전면형 광고 내부에서 전화 걸기 또는 앱스토어로 이동 기능이 실행되는 경우, 애플리케이션이 백그라운드로 들어가게 될 때 호출된다.
-
-_Parameter_  
-&nbsp;&nbsp;&nbsp;interstitial      전면형 광고 닫힘 완료 이벤트가 발생한 AdamInterstitial 객체.
-
-
-
 #### AdamError
 --- 
 
@@ -810,11 +539,11 @@ typedef enum {
 ## 추가 정보(FAQ)
 
 ### 광고 수신 실패 원인에 따른 처리 방법
-AdamAdView 객체에서 광고 수신 실패시에는 AdamAdViewDelegate 프로토콜의 didFailToReceiveAd:error: 메소드가 호출되고, AdamInterstitial 객체에서 광고 수신 실패시에는 AdamInterstitialDelegate 프로토콜의 didFailToReceiveInterstitialAd:error: 메소드가 호출된다.  
+AdamAdView 객체에서 광고 수신 실패시에는 AdamAdViewDelegate 프로토콜의 didFailToReceiveAd:error: 메소드가 호출된다.  
 이 메소드로부터 전달받은 error 객체를 가지고 광고 수신 실패의 원인을 파악할 수 있으며, 각각의 에러 타입에 대한 처리는 다음과 같이 한다.
 
 
-#### Q1. No Fill Ad (AdamAdView / AdamInterstitial 공통)
+#### Q1. No Fill Ad 
 - **domain**: AdamErrorDomain
 - **code**: AdamErrorTypeNoFillAd
 - **원인**:  
@@ -823,13 +552,13 @@ AdamAdView 객체에서 광고 수신 실패시에는 AdamAdViewDelegate 프로�
 일정 시간 이후 다시 호출해본다.
 
 
-#### Q2. No Client Id (AdamAdView / AdamInterstitial 공통)
+#### Q2. No Client Id 
 - **domain**: AdamErrorDomain
 - **code**: AdamErrorTypeNoClientId
 - **원인**:  
-AdamAdView 또는 AdamInterstitial 객체의 clientId 속성을 지정하지 않고 광고를 호출한 경우 발생한다.
+AdamAdView 객체의 clientId 속성을 지정하지 않고 광고를 호출한 경우 발생한다.
 - **처리 방법**:  
-AdamAdView 또는 AdamInterstitial 객체의 clientId 속성에 발급받은 광고단위ID 문자열을 정확하게 할당한다.
+AdamAdView 객체의 clientId 속성에 발급받은 광고단위ID 문자열을 정확하게 할당한다.
 
 #### Q3. Too Small Ad View (AdamAdView)
 - **domain**: AdamErrorDomain
@@ -856,16 +585,15 @@ AdamAdView 또는 AdamInterstitial 객체의 clientId 속성에 발급받은 광
 startAutoRequestAd: 메소드를 호출하여 광고를 자동으로 요청하고 있을 때에는 해당 기능에 전적으로 광고 요청을 맡기고, 별도로 광고를 요청하지 않는다.
 
 
-#### Q6. Too Short Request Interval (AdamAdView / AdamInterstitial 공통)
+#### Q6. Too Short Request Interval 
 - **domain**: AdamErrorDomain
 - **code**: AdamErrorTypeTooShortRequestInterval
 - **원인**:  
-AdamAdView객체는 광고 요청 후 12초 이내에 광고를 재요청 하는 경우, AdamInterstitial 객체는 광고 요청 후 3분 이내에 광고를 재요청 하는 경우 발생한다.
+AdamAdView객체는 광고 요청 후 12초 이내에 광고를 재요청 하는 경우 발생한다.
 - **처리방법**:  
 AdamAdView에서 타이머를 이용해 requestAd 메소드를 직접 호출하는 경우, 타이머의 interval을 적절한 값으로 조정한다. 또는 startAutoRequest: 메소드를 사용하여 광고를 자동 요청하도록 한다.  
-AdamInterstitial 객체의 경우에는 3분 이내에 광고를 재요청 하지 않도록 호출 시점을 조정한다.
 
-#### Q7. Previous Request Not Finished (AdamAdView / AdamInterstitial 공통)
+#### Q7. Previous Request Not Finished 
 - **domain**: AdamErrorDomain
 - **code**: AdamErrorTypePreviousRequestNotFinished
 - **원인**:  
