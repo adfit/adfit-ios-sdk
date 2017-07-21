@@ -1,4 +1,4 @@
-# AdFit(Ad@m) iOS SDK Guide
+# AdFit iOS SDK Guide
 
 이 가이드는 iOS Application 에 모바일 광고를 노출하기 위한 광고 데이터요청과 처리 방법을 설명합니다.
 
@@ -13,7 +13,7 @@ Copyright © Kakao Corp. All Rights Reserved.
 
 ---
 
-## AdFit(Ad@m) 광고 삽입 방법
+## AdFit 광고 삽입 방법
 
 
 ### 개발환경
@@ -23,14 +23,14 @@ Copyright © Kakao Corp. All Rights Reserved.
 * iOS Deployment Target: iOS 4.3 이상
 
 
-### AdFit(Ad@m) SDK 구성
+### AdFit SDK 구성
 
-* libAdamPublisher.a : AdFit(Ad@m) 광고 라이브러리 파일
+* libAdamPublisher.a : AdFit 광고 라이브러리 파일
 * AdamAdView.h : 라이브러리 사용을 위해 필요한 광고 뷰 클래스 헤더
 * AdamError.h: 라이브러리에서 공통으로 사용되는 Error 클래스 헤더
 * AdamAdWrapperView.h : 인터페이스 빌더에서 사용하기 위한 Wrapper 클래스 헤더
 * AdamAdWrapperView.m : 인터페이스 빌더에서 사용하기 위한 Wrapper 클래스 소스
-* Sample : AdFit(Ad@m) SDK를 적용한 샘플 프로젝트
+* Sample : AdFit SDK를 적용한 샘플 프로젝트
 
 
 ### * iOS9 [ATS(App Transport Security)](https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/) 처리
@@ -355,7 +355,7 @@ startAutoRequest: 메소드를 호출한 이후에는 YES 값을 가지며, stop
 
 SDK 버전 정보.
 
-현재 사용 중인 AdFit(Ad@m) SDK의 버전 문자열을 가진다.
+현재 사용 중인 AdFit SDK의 버전 문자열을 가진다.
 
 
 
