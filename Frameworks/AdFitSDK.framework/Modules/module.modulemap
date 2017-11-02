@@ -1,0 +1,11 @@
+framework module AdFitSDK {
+  umbrella header "AdFitSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module AdFitSDK.Swift {
+    header "AdFitSDK-Swift.h"
+    requires objc
+}
