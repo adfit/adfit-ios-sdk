@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		p128Sdc1yL5ZIX20tanQGSePdoY=
+		H87wiqOryGP+JAM4IuJOnj4ux8M=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/i386.swiftmodule</key>
 		<data>
-		gXrP9UyZeUS1WJQYynKGEDMhqcw=
+		+EUs1R4GLkqCAZxqXQguS59v/KI=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		5a2m5dtQOw0VAcUJ+9eYilEqG90=
+		v7u0aR3p9mnx/ZJzmtHAQLDqApQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -76,11 +76,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gXrP9UyZeUS1WJQYynKGEDMhqcw=
+			+EUs1R4GLkqCAZxqXQguS59v/KI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZonzqEqpItBeTU0BVPhmpeVzMRhwn8zYB+9OPF0qHVw=
+			ki+f7uMrsaE6p0IjQ80n65tYdpDNPQ72g9Y89k8qgt8=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftdoc</key>
@@ -98,11 +98,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5a2m5dtQOw0VAcUJ+9eYilEqG90=
+			v7u0aR3p9mnx/ZJzmtHAQLDqApQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			UW6zkwvdQnRNXSlKajDadh+ZhSPxodGT1coi6BtZYAE=
+			ta/3F3Wb/w4kQTIarwWDq04XQ0FMSDcL/wWOJFZj15A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

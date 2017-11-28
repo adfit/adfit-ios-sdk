@@ -1,5 +1,9 @@
 # 변경이력
 
+## v3.0.1
+* Xcode 9.1 대응 (Swift 4.0.2)
+* [strip-frameworks.sh](https://github.com/realm/realm-cocoa/blob/master/scripts/strip-frameworks.sh) 추가
+
 ## v3.0.0
 * iOS 11 대응
 * 배포 포맷 변경: Dynamic Framewok
