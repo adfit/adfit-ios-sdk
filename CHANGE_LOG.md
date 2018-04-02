@@ -1,5 +1,8 @@
 # 변경이력
 
+## v3.0.2
+* Xcode 9.3 대응 (Swift 4.1)
+
 ## v3.0.1
 * Xcode 9.1 대응 (Swift 4.0.2)
 * [strip-frameworks.sh](https://github.com/realm/realm-cocoa/blob/master/scripts/strip-frameworks.sh) 추가
