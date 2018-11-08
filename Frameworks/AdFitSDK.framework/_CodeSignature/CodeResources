@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		HBK6Ttb/jw2Ei5TW8KkzSmhSdKc=
+		</data>
 		<key>Headers/AdFitSDK-Swift.h</key>
 		<data>
-		XE2aSD673Ze6TH02OXhHXlOwVSo=
+		4Slq74um9Z+NGNkPSF93/SwPHYE=
 		</data>
 		<key>Headers/AdFitSDK.h</key>
 		<data>
@@ -14,40 +18,69 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		sEjbUU5Xesm7FMN/aJe3WvytxWE=
+		p/4yVuPZ79+NjI/KsDx8W+dakKA=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/i386.swiftdoc</key>
 		<data>
-		zuVENMCFwfKTyWcb1aFSURvCnC8=
+		n8VUltizoH4xTWc1jHj432i8kUU=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/i386.swiftmodule</key>
 		<data>
-		QYOzlpG+ZBvHThQBTpoGcfzlelU=
+		7+4U6mRPBTpxJCAkdUEDK+crpcw=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		YV+i8x2zMRDCR6K/1PFKLRFQFnc=
+		/DZqndavjmpgtbsHuE/Zlod5jII=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		o5uEyyDiwvV/goQo7rU78XpdnVc=
+		qVqz0nJ5miqOWBtRtsBJ1iDYs1U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		eqw0nonG7Z9A/ZrTuxmWwoJnW0U=
 		</data>
+		<key>en.lproj/AdFit.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hxLKca0FqiHILxogG4oZTdhLNjI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ko.lproj/AdFit.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UzGsDZKoO4GTaOmmVDUhcGMAgiA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HBK6Ttb/jw2Ei5TW8KkzSmhSdKc=
+			</data>
+			<key>hash2</key>
+			<data>
+			BIJ6baU+rCftj/QDPKAPSqfiSDiqjLW0MIZUlnLddxk=
+			</data>
+		</dict>
 		<key>Headers/AdFitSDK-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XE2aSD673Ze6TH02OXhHXlOwVSo=
+			4Slq74um9Z+NGNkPSF93/SwPHYE=
 			</data>
 			<key>hash2</key>
 			<data>
-			tU1QuFRLyr/jStbBN87tj/0tAOFUtpi+tdTkC95AjHs=
+			DUNHAmepIVfRfM9wrdysmWUoUSSzW/M/rRESD1mVyyE=
 			</data>
 		</dict>
 		<key>Headers/AdFitSDK.h</key>
@@ -65,44 +98,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zuVENMCFwfKTyWcb1aFSURvCnC8=
+			n8VUltizoH4xTWc1jHj432i8kUU=
 			</data>
 			<key>hash2</key>
 			<data>
-			xW6fmZ1ODgOlHHr3gujs4c1/90XGQwakw5WG7H2gONk=
+			9QOWQZ++1ujtSYFqIDGJjTnbKXSIx9KWZAjWlZ3RAgw=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QYOzlpG+ZBvHThQBTpoGcfzlelU=
+			7+4U6mRPBTpxJCAkdUEDK+crpcw=
 			</data>
 			<key>hash2</key>
 			<data>
-			IZ8S++W4dr+38ZiqGUgh1JTG0tP9+ukMSZ2US7CVWZA=
+			e+9hN2RTLQMe9JayZ4qDucBonhsVjQ26QvDCH0wm9Ng=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YV+i8x2zMRDCR6K/1PFKLRFQFnc=
+			/DZqndavjmpgtbsHuE/Zlod5jII=
 			</data>
 			<key>hash2</key>
 			<data>
-			nYdZZh0YP+abr90hxI1khJkO4BcpNPxJVJGWMeaPgwM=
+			nSriz+GbCSaILXuYmJVnzanfpQoF8lGWZJknCnFt2DM=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			o5uEyyDiwvV/goQo7rU78XpdnVc=
+			qVqz0nJ5miqOWBtRtsBJ1iDYs1U=
 			</data>
 			<key>hash2</key>
 			<data>
-			PgFa0gJB4u46yFaHkFPShZd8gAxCM6mSfFfr8gJT5Yo=
+			Bj4ojjkl+68GKNvr3WkkSAFb3pH/SHNrs+iXERbJ5/4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -116,10 +149,36 @@
 			lNRijdUPmYq6MT04mvv6Pe+ijdOkB8+Eu1rlqFlND4E=
 			</data>
 		</dict>
+		<key>en.lproj/AdFit.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hxLKca0FqiHILxogG4oZTdhLNjI=
+			</data>
+			<key>hash2</key>
+			<data>
+			jgd7P3zQhhuWJr805dpYlXNW3ia2iUGxjAmdDcUkois=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ko.lproj/AdFit.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UzGsDZKoO4GTaOmmVDUhcGMAgiA=
+			</data>
+			<key>hash2</key>
+			<data>
+			gYMA/csVIot/YT3BEjV6zY7dZfqqjSgFPG4sIEruvk8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -150,24 +209,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -203,13 +250,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

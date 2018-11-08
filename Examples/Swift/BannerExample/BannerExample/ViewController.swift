@@ -15,7 +15,6 @@ class ViewController: UIViewController, AdFitBannerAdViewDelegate {
         super.viewDidLoad()
         
         let bannerAdView = AdFitBannerAdView(clientId: "Input Yout Client ID", adUnitSize: "320x50")
-        bannerAdView.refreshInterval = 30
         bannerAdView.rootViewController = self
         bannerAdView.delegate = self
         bannerAdView.frame = view.bounds.divided(atDistance: 50, from: .maxYEdge).slice

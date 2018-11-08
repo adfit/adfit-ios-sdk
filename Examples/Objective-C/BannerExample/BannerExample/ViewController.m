@@ -16,7 +16,6 @@
     
     AdFitBannerAdView *bannerAdView = [[AdFitBannerAdView alloc] initWithClientId:@"Input Your Client ID"
                                                                        adUnitSize:@"320x50"];
-    bannerAdView.refreshInterval = 30;
     bannerAdView.rootViewController = self;
     bannerAdView.delegate = self;
     CGRect slice, remainder;
