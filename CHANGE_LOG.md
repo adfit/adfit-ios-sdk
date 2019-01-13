@@ -1,5 +1,9 @@
 # 변경이력
 
+## v3.0.6
+* 안정성 향상 
+* Bug Fix 
+
 ## v3.0.5
 * AdFitBannerAdView 클래스의 refreshInterval 속성 제거
 * Bug Fix
