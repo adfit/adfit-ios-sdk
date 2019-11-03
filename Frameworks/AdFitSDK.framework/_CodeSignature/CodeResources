@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		O86E7LszzONlzAsRTFgqRDivmz4=
+		2Z27nlfkVf4RAGyBss06yxLSEVk=
 		</data>
 		<key>Headers/AVAudioSessionPatch.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/AdFitSDK-Swift.h</key>
 		<data>
-		qOPp3lXfHU0CzLbC3b6TUBmqElE=
+		zwqv25HLVBS4P28DgmjT4CBdu7w=
 		</data>
 		<key>Headers/AdFitSDK.h</key>
 		<data>
@@ -22,23 +22,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cn9mWBepu4AroKNKDuoY236Lvkw=
+		KtLXUwARw+HpYmBq7j7E6AVLuwU=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/i386.swiftdoc</key>
 		<data>
-		urw/2Ll/qiVoB7apCA7Lg108S9E=
+		sHcqC+EUFwWsQzPsGcFzEBlrI1I=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/i386.swiftmodule</key>
 		<data>
-		+Ke2Ih6FAA6Kc2KXF1uy0LJF1Z0=
+		4N4AofBoUqp+FFsB4IMH3WBRFeM=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		Fz8zHBMxRg7vVKj4EVVd6Blb8xM=
+		cM/agqGinqBHZJtoNVskzJtOADM=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		YMvdZ6LpMSPu0X3WsEo1SWq6Yx4=
+		kBQ6f9ROKzQbZBtlbGrajG+2jC8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,11 +69,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			O86E7LszzONlzAsRTFgqRDivmz4=
+			2Z27nlfkVf4RAGyBss06yxLSEVk=
 			</data>
 			<key>hash2</key>
 			<data>
-			FUaeCosvvg6NjW+BwcwPIJGtorM5tm9yb7YIDTz9mV8=
+			gHgGyRCMxnSuRsjlU/ATyRzaG9ilJMGFbhGnLX8c/hU=
 			</data>
 		</dict>
 		<key>Headers/AVAudioSessionPatch.h</key>
@@ -91,11 +91,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qOPp3lXfHU0CzLbC3b6TUBmqElE=
+			zwqv25HLVBS4P28DgmjT4CBdu7w=
 			</data>
 			<key>hash2</key>
 			<data>
-			2WBUPiAi5lGUAv6y2pxddVtTMIZpuLDEAzgHvkB2NpM=
+			HUZ7+TjG4ggF1TNL189Qg/vuXjtEf/pdsZ41ZXmwIrs=
 			</data>
 		</dict>
 		<key>Headers/AdFitSDK.h</key>
@@ -113,44 +113,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			urw/2Ll/qiVoB7apCA7Lg108S9E=
+			sHcqC+EUFwWsQzPsGcFzEBlrI1I=
 			</data>
 			<key>hash2</key>
 			<data>
-			XbRkAQgWUWEzKC6f78xJpN8v7+v2BEHArFLvvfwdM3U=
+			IFvubrLVO/+TkauG62+6t6oeYTi947F6QBxb2WCN0HE=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+Ke2Ih6FAA6Kc2KXF1uy0LJF1Z0=
+			4N4AofBoUqp+FFsB4IMH3WBRFeM=
 			</data>
 			<key>hash2</key>
 			<data>
-			r8qRYvF/gs7PKnP0HmB2l2F7A6pe9HKA06mi/QjFbes=
+			M85j1M7TKe5RbdLWlSLwPAzHpa/KEtGjwmcHXLBFrvE=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Fz8zHBMxRg7vVKj4EVVd6Blb8xM=
+			cM/agqGinqBHZJtoNVskzJtOADM=
 			</data>
 			<key>hash2</key>
 			<data>
-			QDDi7VrLxbT5EVeENXDXGfjXcwIq7FExww6w/9VBM1E=
+			6QxbvSEktKzQPX6PdKFIjD8w8iPeJQPWcuLUanT+z/Q=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YMvdZ6LpMSPu0X3WsEo1SWq6Yx4=
+			kBQ6f9ROKzQbZBtlbGrajG+2jC8=
 			</data>
 			<key>hash2</key>
 			<data>
-			9hc/gmFdfjdynIa5piD2RUiBnyLA1CFGJX/+vhCi2Zw=
+			1sF1wd5R/COnBpi4H2dk9ZWMwTuo/+eQ6kUIV3Hx6yw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

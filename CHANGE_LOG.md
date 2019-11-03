@@ -1,5 +1,10 @@
 # 변경이력
 
+## v3.0.9
+* Xcode 11.2 대응 (Swift 5.1.2)
+* 광고 클릭시 랜딩 브라우저의 modalPresentationStyle을 
+`.fullscreen`으로 변경
+
 ## v3.0.8
 * Xcode 11.0 대응 (Swift 5.1)
 
