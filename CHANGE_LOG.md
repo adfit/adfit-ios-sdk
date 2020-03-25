@@ -1,5 +1,8 @@
 # 변경이력
 
+## v3.0.10
+* Xcode 11.4 대응 (Swift 5.2)
+
 ## v3.0.9
 * Xcode 11.2 대응 (Swift 5.1.2)
 * 광고 클릭시 랜딩 브라우저의 modalPresentationStyle을 
