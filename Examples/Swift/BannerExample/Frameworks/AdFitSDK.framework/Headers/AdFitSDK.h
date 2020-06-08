@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AVAudioSessionPatch.h"
 
 //! Project version number for AdFitSDK.
 FOUNDATION_EXPORT double AdFitSDKVersionNumber;
