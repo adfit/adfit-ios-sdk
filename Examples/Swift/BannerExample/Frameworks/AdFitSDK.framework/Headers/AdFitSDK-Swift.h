@@ -438,11 +438,6 @@ SWIFT_CLASS("_TtC8AdFitSDK19AdFitNativeAdLoader")
 /// 이 아이콘을 표시하기 위해 별다른 처리는 필요하지 않으며, 지정된 위치에 자동으로 표시됩니다.<br>
 /// 기본값은 <em>topRight</em> (우측 상단) 입니다.
 @property (nonatomic) enum AdFitInfoIconPosition infoIconPosition;
-/// 네이티브 광고에 포함된 이미지 에셋의 프리로드 사용 여부.<br>
-/// 프리로드 기능을 사용하면, 광고 데이터 수신 직후 모든 이미지 에셋을 다운로드 받습니다.<br>
-/// 해당 기능을 사용하지 않도록 설정하면 이미지 에셋은 뷰 바인딩 시점에 다운로드 됩니다.<br>
-/// 기본값은 <em>true</em> 입니다.
-@property (nonatomic) BOOL preloadAssets;
 /// 네이티브 광고를 통해 받기 원하는 미디어 요소의 가로 길이.<br>
 /// 이 프로퍼티를 지정하면, 광고 서버는 해당 길이에 맞게 미디어 요소의 크기를 최적화 하여 전달합니다.<br>
 /// 기본값은 현재 기기가 세로 모드일 때의 가로 해상도입니다.
