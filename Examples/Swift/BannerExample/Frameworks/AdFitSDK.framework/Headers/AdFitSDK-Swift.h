@@ -292,7 +292,7 @@ SWIFT_PROTOCOL("_TtP8AdFitSDK25AdFitBannerAdViewDelegate_")
 @end
 
 /// 네이티브 광고에서 정보 아이콘(<img src="https://t1.daumcdn.net/adfit/image/d_i_m_201607.png" width="20" valign="middle">)을 표시할 위치.<br>
-typedef SWIFT_ENUM(NSInteger, AdFitInfoIconPosition, closed) {
+typedef SWIFT_ENUM(NSInteger, AdFitInfoIconPosition, open) {
 /// 좌측 상단
   AdFitInfoIconPositionTopLeft = 0,
 /// 우측 상단
@@ -304,7 +304,7 @@ typedef SWIFT_ENUM(NSInteger, AdFitInfoIconPosition, closed) {
 };
 
 /// 광고에 포함된 미디어 요소의 타입.
-typedef SWIFT_ENUM(NSInteger, AdFitMediaType, closed) {
+typedef SWIFT_ENUM(NSInteger, AdFitMediaType, open) {
 /// 알 수 없음. 일반적으로 광고 로드가 완료되지 않은 시점에 unknwon 값을 가집니다.
   AdFitMediaTypeUnknown = 0,
 /// 이미지 타입
@@ -518,7 +518,7 @@ SWIFT_PROTOCOL("_TtP8AdFitSDK23AdFitNativeAdRenderable_")
 @end
 
 /// 광고에 포함된 비디오의 재생 정책.
-typedef SWIFT_ENUM(NSInteger, AdFitVideoPlayPolicy, closed) {
+typedef SWIFT_ENUM(NSInteger, AdFitVideoPlayPolicy, open) {
 /// 항상 수동으로 재생. 사용자가 재생 버튼을 눌러야만 재생됩니다.
   AdFitVideoPlayPolicyAlwaysManualPlay = 0,
 /// 항상 자동으로 재생. 비디오 영역이 화면에 노출될 때 자동으로 재생이 시작됩니다.
