@@ -8,9 +8,12 @@
 
 import UIKit
 import AdFitSDK
+import AppTrackingTransparency
 
 class ViewController: UIViewController, AdFitBannerAdViewDelegate {
 
+    var bannerAdView: AdFitBannerAdView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +23,7 @@ class ViewController: UIViewController, AdFitBannerAdViewDelegate {
         bannerAdView.frame = view.bounds.divided(atDistance: 50, from: .maxYEdge).slice
         bannerAdView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
         view.addSubview(bannerAdView)
-        bannerAdView.loadAd()
+        loadAd()
     }
     
     //Mark - AdFitBannerAdViewDelegate
@@ -34,6 +37,16 @@ class ViewController: UIViewController, AdFitBannerAdViewDelegate {
     
     func adViewDidClickAd(_ bannerAdView: AdFitBannerAdView) {
         print("didClickAd")
+    }
+    
+    private func loadAd() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { [weak self] status in
+                self?.bannerAdView.loadAd()
+            }
+        } else {
+            self.bannerAdView.loadAd()
+        }
     }
 }
 

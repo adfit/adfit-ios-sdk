@@ -7,6 +7,13 @@
 //
 
 #import "ViewController.h"
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
+
+@interface ViewController()<AdFitBannerAdViewDelegate>
+
+@property (nonatomic) AdFitBannerAdView *bannerAdView;
+
+@end
 
 @implementation ViewController
 
@@ -23,7 +30,17 @@
     bannerAdView.frame = slice;
     bannerAdView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     [self.view addSubview:bannerAdView];
-    [bannerAdView loadAd];
+    [self loadAd];
+}
+
+- (void)loadAd {
+    if (@available(iOS 14, *)) {
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            [self.bannerAdView loadAd];
+        }];
+    } else {
+        [self.bannerAdView loadAd];
+    }
 }
 
 #pragma mark - AdFitBannerAdViewDelegate
