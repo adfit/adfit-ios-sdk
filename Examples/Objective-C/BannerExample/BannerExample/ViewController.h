@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AdFitSDK/AdFitSDK-Swift.h>
 
-@interface ViewController : UIViewController <AdFitBannerAdViewDelegate>
+@interface ViewController : UIViewController
 
 @end
 
