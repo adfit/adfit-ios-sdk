@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		C1E6/8gD2rdRv8zIk/KtZoW5g7w=
+		kFWQpIRR34hV3yMQAK5uI9p0BWQ=
 		</data>
 		<key>Headers/AdFitSDK-Swift.h</key>
 		<data>
-		xRqkzpEc8LPu386BfqVFrdn8Lpw=
+		LUGyTaMbrJSA2RztuEBorNUC/WA=
 		</data>
 		<key>Headers/AdFitSDK.h</key>
 		<data>
@@ -22,39 +22,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		k5BAvhm71FA2N0gQ3GHZxvL8Uv4=
+		cpD6kiRzX5niMsiO9ubVCuLG8Tk=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		RtFXginuBPxoAgxL+HSufvIMGV8=
+		WYI0ajpGNpCvUEMcNgW+31CBrpg=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		RtFXginuBPxoAgxL+HSufvIMGV8=
+		WYI0ajpGNpCvUEMcNgW+31CBrpg=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		SOdZLEYa9RON6q8pchoWO0D2Hj0=
+		v4jVtlDZqDLAsHsB7KA7wDYnbtk=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		VEOuiZA/tirK8sEOKe53FGHckJw=
+		5Pzh8BctCF1yOz5g4zPBXLb+Mv8=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Ymd1BmebzRFiBe2lUF8xhDX9Va8=
+		bCb9RdtGpIOpE+098aQmZVpG/HU=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		SOdZLEYa9RON6q8pchoWO0D2Hj0=
+		v4jVtlDZqDLAsHsB7KA7wDYnbtk=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		VEOuiZA/tirK8sEOKe53FGHckJw=
+		5Pzh8BctCF1yOz5g4zPBXLb+Mv8=
 		</data>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		Ymd1BmebzRFiBe2lUF8xhDX9Va8=
+		bCb9RdtGpIOpE+098aQmZVpG/HU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -64,7 +64,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hxLKca0FqiHILxogG4oZTdhLNjI=
+			qIeyzGE95SVDVSV/us1PwaDfODs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -73,7 +73,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UzGsDZKoO4GTaOmmVDUhcGMAgiA=
+			bTHzNgystkQM9yZYOV/1DcfKiB8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -85,14 +85,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lCVa/+Ey5AYEMTIZXALEKcWSrBPdU4xYtXemp5JzlYQ=
+			FpXyWHm/y9T+ci9zLP7vaJVA8A72mDKbgBcgn3CPy7g=
 			</data>
 		</dict>
 		<key>Headers/AdFitSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2n21/hpTHMNtgQsMyhf/iKWJYxzaEG5V4zk/1gSr52k=
+			iZJb6zTHidrKt7MBRk/2WBgRd7+QGoBAh9nR7ah4a+w=
 			</data>
 		</dict>
 		<key>Headers/AdFitSDK.h</key>
@@ -113,56 +113,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Sl6nqyEDnyOtjBeD7sPbHB4Q/9ZWdLjHsBKUPPmTTFk=
+			m7bryLLI4xlhH5qOWQzvql7OT7ZnzMJRDsjRQ+Mw6Y0=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Sl6nqyEDnyOtjBeD7sPbHB4Q/9ZWdLjHsBKUPPmTTFk=
+			m7bryLLI4xlhH5qOWQzvql7OT7ZnzMJRDsjRQ+Mw6Y0=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lLmIPjfh5IcMtl1JQvh0PCcd4X5QNtuyM0Q7LoxjayE=
+			Le+eoST8dwLXsOkGXBD0gf8mH79lo4fYTl01g+FJZl4=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4ZZ/9SpHm5HtFUhrDcOvHMHXB5aOw8Va0m4NNOq4rCM=
+			LsNJ5IDJmJ6LwpYiTKla4a8XRvvxvUrkOIkY0O+VuxA=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			E96ArcqlukKcxvkwo0pVJyHLm9jddrtasUIyv3Zd+bQ=
+			NxH5U5WJK9DeT57KXuIJkj6HC/KkQdS+etLJ/QZR3nY=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lLmIPjfh5IcMtl1JQvh0PCcd4X5QNtuyM0Q7LoxjayE=
+			Le+eoST8dwLXsOkGXBD0gf8mH79lo4fYTl01g+FJZl4=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4ZZ/9SpHm5HtFUhrDcOvHMHXB5aOw8Va0m4NNOq4rCM=
+			LsNJ5IDJmJ6LwpYiTKla4a8XRvvxvUrkOIkY0O+VuxA=
 			</data>
 		</dict>
 		<key>Modules/AdFitSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			E96ArcqlukKcxvkwo0pVJyHLm9jddrtasUIyv3Zd+bQ=
+			NxH5U5WJK9DeT57KXuIJkj6HC/KkQdS+etLJ/QZR3nY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -176,7 +176,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jgd7P3zQhhuWJr805dpYlXNW3ia2iUGxjAmdDcUkois=
+			d3eBzbcI0lmdSt381NUndPBPxAjnzOG3cK1iENNFGzI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -185,7 +185,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gYMA/csVIot/YT3BEjV6zY7dZfqqjSgFPG4sIEruvk8=
+			mZo63A5fgi2xKsSK8Q6pUpn+Swr7ZYI8rSnQ74fL6Rg=
 			</data>
 			<key>optional</key>
 			<true/>
