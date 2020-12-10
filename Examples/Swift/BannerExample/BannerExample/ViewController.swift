@@ -14,10 +14,11 @@ class ViewController: UIViewController, AdFitBannerAdViewDelegate {
 
     var bannerAdView: AdFitBannerAdView!
     
+    //TODO: Info.plist에 Privacy - Tracking Usage Description 반드시 확인하세요.
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let bannerAdView = AdFitBannerAdView(clientId: "Input Yout Client ID", adUnitSize: "320x50")
+        bannerAdView = AdFitBannerAdView(clientId: "Input Yout Client ID", adUnitSize: "320x50")
         bannerAdView.rootViewController = self
         bannerAdView.delegate = self
         bannerAdView.frame = view.bounds.divided(atDistance: 50, from: .maxYEdge).slice
