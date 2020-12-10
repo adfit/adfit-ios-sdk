@@ -19,17 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    //TODO: Info.plist에 Privacy - Tracking Usage Description 반드시 확인하세요.
     
-    AdFitBannerAdView *bannerAdView = [[AdFitBannerAdView alloc] initWithClientId:@"Input Your Client ID"
-                                                                       adUnitSize:@"320x50"];
-    bannerAdView.rootViewController = self;
-    bannerAdView.delegate = self;
+    self.bannerAdView = [[AdFitBannerAdView alloc] initWithClientId:@"Input Your Client ID" adUnitSize:@"320x50"];
+    self.bannerAdView.rootViewController = self;
+    self.bannerAdView.delegate = self;
     CGRect slice, remainder;
     CGRectDivide(self.view.bounds, &slice, &remainder, 50, CGRectMaxYEdge);
-    bannerAdView.frame = slice;
-    bannerAdView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-    [self.view addSubview:bannerAdView];
+    self.bannerAdView.frame = slice;
+    self.bannerAdView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+    [self.view addSubview:self.bannerAdView];
     [self loadAd];
 }
 
