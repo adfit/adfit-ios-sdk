@@ -18,7 +18,7 @@ class ViewController: UIViewController, AdFitBannerAdViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bannerAdView = AdFitBannerAdView(clientId: "Input Yout Client ID", adUnitSize: "320x50")
+        bannerAdView = AdFitBannerAdView(clientId: "Input Your Client ID", adUnitSize: "320x50")
         bannerAdView.rootViewController = self
         bannerAdView.delegate = self
         bannerAdView.frame = view.bounds.divided(atDistance: 50, from: .maxYEdge).slice
