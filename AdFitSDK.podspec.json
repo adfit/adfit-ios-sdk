@@ -1,7 +1,7 @@
 {
   "authors": "AdFit",
   "description": "AdFit Ad SDK for Publisher",
-  "version": "3.7.0",
+  "version": "3.8.5",
   "homepage": "https://github.com/adfit/adfit-ios-sdk.git",
   "license": {
     "type": "Apache License, Version 2.0",
@@ -9,11 +9,11 @@
   },
   "name": "AdFitSDK",
   "platforms": {
-    "ios": "11.0"
+    "ios": "12.0"
   },
   "source": {
     "git": "https://github.com/adfit/adfit-ios-sdk.git",
-    "tag": "3.7.0"
+    "tag": "3.8.5"
   },
   "summary": "AdFit Ad SDK",
   "preserve_paths": "Frameworks/*.framework",

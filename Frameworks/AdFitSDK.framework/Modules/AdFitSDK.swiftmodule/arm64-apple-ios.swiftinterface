@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AdFitSDK
 import AVFoundation
 import AVKit
@@ -28,9 +28,9 @@ import zlib
     @objc set
   }
   @objc override final public func layoutSubviews()
-  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
 }
 @objc public enum AdFitMediaType : Swift.Int, Swift.CustomStringConvertible {
   case unknown = 0
@@ -39,8 +39,8 @@ import zlib
   public var description: Swift.String {
     get
   }
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -58,9 +58,6 @@ import zlib
     @objc get
   }
   @objc final public var title: Swift.String? {
-    @objc get
-  }
-  @objc final public var body: Swift.String? {
     @objc get
   }
   @objc final public var profileName: Swift.String? {
@@ -90,8 +87,8 @@ import zlib
   public var description: Swift.String {
     get
   }
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -138,8 +135,8 @@ extension AVPlayerViewController {
 @objc @_inheritsConvenienceInitializers final public class AdFit : ObjectiveC.NSObject {
   @objc public static var videoPlayPolicy: AdFitSDK.AdFitVideoPlayPolicy
   @objc final public class func configInit()
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @objc public protocol AdFitMediaViewDelegate : ObjectiveC.NSObjectProtocol {
   @objc optional func mediaViewVideoDidPlay(_ mediaView: AdFitSDK.AdFitMediaView)
@@ -159,12 +156,11 @@ extension AVPlayerViewController {
   @objc final public var desiredMediaWidth: CoreGraphics.CGFloat
   @objc public init(clientId: Swift.String, count: Swift.Int = 1)
   @objc final public func loadAd()
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @objc public protocol AdFitNativeAdRenderable {
   @objc func adTitleLabel() -> UIKit.UILabel?
-  @objc func adBodyLabel() -> UIKit.UILabel?
   @objc func adCallToActionButton() -> UIKit.UIButton?
   @objc func adProfileNameLabel() -> UIKit.UILabel?
   @objc func adProfileIconView() -> UIKit.UIImageView?
@@ -178,8 +174,8 @@ extension AVPlayerViewController {
   public var description: Swift.String {
     get
   }
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
