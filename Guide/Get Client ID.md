@@ -1,8 +1,8 @@
 # 광고단위 ID(Client ID) 발급받기
-실제 광고를 수신하고 수익을 창출하기 위해서는, 먼저 [AdFit 플랫폼](http://adfit.biz.daum.net)에서 자신의 앱을 매체로 등록하고 광고단위 ID(Client ID)를 발급받아야 합니다.<br>
+실제 광고를 수신하고 수익을 창출하기 위해서는, 먼저 [AdFit 플랫폼](http://adfit.kakao.com)에서 자신의 앱을 매체로 등록하고 광고단위 ID(Client ID)를 발급받아야 합니다.<br>
 아래의 웹 사이트에서 비즈니스 회원 가입 후, 앱 등록 / 광고단위 ID 발급 단계를 진행할 수 있습니다.
 
-**[http://adfit.biz.daum.net](http://adfit.biz.daum.net)**
+**[http://adfit.kakao.com](http://adfit.kakao.com)**
 
 ---------
 

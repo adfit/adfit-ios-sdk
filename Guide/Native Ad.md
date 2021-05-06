@@ -70,21 +70,21 @@ class MyViewController: UIViewController, AdFitNativeAdDelegate {
 ### 1) 네이티브 광고 뷰 구성
 다음은 피드 형태로 네이티브 광고 뷰를 구성한 예입니다.
 
-<img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/native-ad-components.jpg" width="640" style="border:1px solid #aaa">
+<img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/native-ad-components2.png" width="640" style="border:1px solid #aaa">
 
 | 번호 | 설명                     | UI 클래스                | AdFitNativeAdRenderable |
 |-----|-------------------------|------------------------|-------------------------|
-| 1   | 제목 텍스트                | UILabel                | adTitleLabel()          |
-| 2   | 본문 텍스트                | UILabel                | adBodyLabel()           |
-| 3   | call to action 버튼      | UIButton               | adCallToActionButton()  |
-| 4   | 광고주 이름 텍스트           | UILabel                | adProfileNameLabel()    |
-| 5   | 광고주 아이콘 이미지         | UIImageView             | adProfileIconView()    |
-| 6   | 미디어 (이미지, 비디오 등)    | AdFitMediaView         | adMediaView()           |
+| 1   | 제목                     | UILabel                | adTitleLabel()          |
+| 2   | 행동유도버튼               | UIButton               | adCallToActionButton()  |
+| 3   | 프로필명                  | UILabel                | adProfileNameLabel()    |
+| 4   | 프로필이미지               | UIImageView             | adProfileIconView()    |
+| 5   | 미디어 (이미지, 동영상 등)    | AdFitMediaView         | adMediaView()           |
+| 6   | 광고 아이콘                |                        |                         |
 
 - AdFit의 네이티브 광고는 위의 6가지 요소로 구성됩니다.
 - 개별 요소들은 위 표에서 대응되는 UI 클래스를 통해 표시되도록 구현해주세요.
 - 사용자가 광고임을 명확히 인지할 수 있도록 "광고", "AD", "Sponsored" 등의 텍스트를 별도로 표시해주셔야 합니다.
-- `6. 미디어` 요소의 경우 SDK에 포함된 `AdFitMediaView` 클래스를 사용하여 표시합니다.<br>
+- `5. 미디어` 요소의 경우 SDK에 포함된 `AdFitMediaView` 클래스를 사용하여 표시합니다.<br>
    인터페이스 빌더를 사용하시는 경우, 빈 View를 배치한 후 클래스를 `AdFitMediaView` 로 지정하시면 됩니다.
   - `AdFitMediaView` 클래스에는 `videoRenderer()` 메서드가 구현되어 있습니다.<br>
  네이티브 광고의 미디어 타입이 비디오인 경우, 해당 메서드를 호출하여 `AdFitVideoRenderer` 객체에 접근할 수 있습니다.<br>
@@ -103,8 +103,7 @@ import AdFit
 
 class MyNativeAdView: UIView, AdFitNativeAdRenderable {
 
-    @IBOutlet weak var titleLabel: UILabel?
-    @IBOutlet weak var bodyLabel: UILabel?    
+    @IBOutlet weak var titleLabel: UILabel?   
     @IBOutlet weak var callToActionButton: UIButton?
     @IBOutlet weak var profileImageView: UIImageView?
     @IBOutlet weak var profileNameLabel: UILabel?
@@ -113,10 +112,6 @@ class MyNativeAdView: UIView, AdFitNativeAdRenderable {
     // MARK: - AdFitNativeAdRenderable
     func adTitleLabel() -> UILabel? {
         return titleLabel
-    }
-    
-    func adBodyLabel() -> UILabel? {
-        return bodyLabel
     }
     
     func adCallToActionButton() -> UIButton? {
@@ -146,7 +141,6 @@ class MyNativeAdView: UIView, AdFitNativeAdRenderable {
 @interface MyNativeAdView () <AdFitNativeAdRenderable>
 
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
-@property (nonatomic, weak) IBOutlet UILabel *bodyLabel;
 @property (nonatomic, weak) IBOutlet UIButton *callToActionButton;
 @property (nonatomic, weak) IBOutlet UILabel *profileNameLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *profileIconView;
@@ -159,10 +153,6 @@ class MyNativeAdView: UIView, AdFitNativeAdRenderable {
 #pragma mark - AdFitNativeAdRenderable
 - (UILabel *)adTitleLabel {
     return self.titleLabel;
-}
-
-- (UILabel *)adBodyLabel {
-    return self.bodyLabel;
 }
 
 - (UIButton *)adCallToActionButton {
