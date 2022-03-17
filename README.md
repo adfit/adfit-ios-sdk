@@ -11,7 +11,7 @@
 > 이 가이드는 iOS Application 에 모바일 광고를 노출하기 위한 광고 데이터요청과 처리 방법을 설명합니다.<br>
 사이트/앱 운영정책에 어긋나는 경우 적립금 지급이 거절 될 수 있으니 유의하시기 바랍니다.
 
-> SPM 을 지원 합니다. (https://github.com/adfit/adfit-spm.git)
+> SPM 을 지원 합니다. 레포지토리 주소는 다음과 같습니다.<br> (https://github.com/adfit/adfit-spm.git)
 
 ## 지원
 * SDK 연동 가이드 [Wiki](https://github.com/adfit/adfit-ios-sdk/wiki)
