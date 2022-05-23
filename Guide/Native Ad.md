@@ -10,6 +10,7 @@ Native Ad는 앱 / 플랫폼 고유의 UI를 사용자에게 제공되도록 광
 - 새로 네이티브 광고를 요청하기 위해서는 새로운 `AdFitNativeAdLoader` 객체를 생성하여야 합니다.
 
 <h5 class="tab-title" data-tab-name="native-request">Swift</h5>
+
 ```swift
 import UIKit
 import AdFit
@@ -35,6 +36,7 @@ class MyViewController: UIViewController, AdFitNativeAdDelegate {
 ```
 
 <h5 class="tab-title" data-tab-name="native-request">Objective-C</h5>
+
 ```objc
 #import "MyViewController.h"
 #import "MyNativeAdView.h"
@@ -97,6 +99,7 @@ class MyViewController: UIViewController, AdFitNativeAdDelegate {
 다음은 뷰 클래스에 `AdFitNativeAdRenderable` 프로토콜을 구현한 예입니다.
 
 <h5 class="tab-title" data-tab-name="native-renderable">Swift</h5>
+
 ```swift
 import UIKit
 import AdFit
@@ -134,6 +137,7 @@ class MyNativeAdView: UIView, AdFitNativeAdRenderable {
 ```
 
 <h5 class="tab-title" data-tab-name="native-renderable">Objective-C</h5>
+
 ```objc
 #import "MyNativeAdView.h"
 #import "AdFit-Swift.h"
@@ -212,6 +216,7 @@ class MyNativeAdView: UIView, AdFitNativeAdRenderable {
 다음은 광고 수신 후 `mediaAspectRatio` 속성을 사용하의 광고 뷰의 사이즈를 조정하는 예제입니다.
 
 <h5 class="tab-title" data-tab-name="native-sizing">Swift</h5>
+
 ```swift
 func nativeAdDidReceiveAd(_ nativeAd: AdFitNativeAd) {
     let nativeAdView = MyNativeAdView(frame: view.bounds.divided(atDistance: 300, from: .minYEdge).slice)
@@ -224,6 +229,7 @@ func nativeAdDidReceiveAd(_ nativeAd: AdFitNativeAd) {
 ```
 
 <h5 class="tab-title" data-tab-name="native-sizing">Objective-C</h5>
+
 ```objc
 - (void)nativeAdDidReceiveAd:(AdFitNativeAd *)nativeAd {
     MyNativeAdView *nativeAdView = [[MyNativeAdView alloc] initWithFrame:CGRectMake(0.f, 0.f, 300.f, 200.f)];
@@ -244,6 +250,7 @@ func nativeAdDidReceiveAd(_ nativeAd: AdFitNativeAd) {
 - `AdFitNativeAdDelegate` 프로토콜을 구현하면, 광고 클릭시 `nativeAdDidClickAd(_:)` 메서드가 호출됩니다.
 
 <h5 class="tab-title" data-tab-name="native-delegate">Swift</h5>
+
 ```swift
 func nativeAdDidReceiveAd(_ nativeAd: AdFitNativeAd) {
     print("didReceiveAd")
@@ -260,6 +267,7 @@ func nativeAdDidClickAd(_ nativeAd: AdFitNativeAd) {
 ```
 
 <h5 class="tab-title" data-tab-name="native-delegate">Objective-C</h5>
+
 ```objc
 - (void)nativeAdDidReceiveAd:(AdFitNativeAd *)nativeAd {
 	NSLog(@"didReceiveAd");

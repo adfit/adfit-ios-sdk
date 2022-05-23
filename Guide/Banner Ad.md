@@ -3,6 +3,7 @@
 ## <a name="heading1"></a> 1. 광고 요청하기
 
 <h5 class="tab-title" data-tab-name="banner-load">Swift</h5>
+
 ``` swift
 import UIKit
 import AdFit
@@ -22,6 +23,7 @@ class MyViewController: UIViewController {
 ```
 
 <h5 class="tab-title" data-tab-name="banner-load">Objective-C</h5>
+
 ``` objc
 #import "MyViewController.h"
 #import <AdFit/AdFit-Swift.h>
@@ -57,6 +59,7 @@ class MyViewController: UIViewController {
 광고를 정상적으로 받은 경우, 광고를 받지 못한 경우, 광고가 클릭된 경우에 대한 delegate 메서드를 제공합니다.
 
 <h5 class="tab-title" data-tab-name="banner-delegate">Swift</h5>
+
 ``` swift
 func adViewDidReceiveAd(_ bannerAdView: AdFitBannerAdView) {
     print("didReceiveAd")
@@ -72,6 +75,7 @@ func adViewDidClickAd(_ bannerAdView: AdFitBannerAdView) {
 ```
 
 <h5 class="tab-title" data-tab-name="banner-delegate">Objective-C</h5>
+
 ``` objc
 - (void)adViewDidReceiveAd:(AdFitBannerAdView *)bannerAdView {
     NSLog(@"didReceiveAd");
