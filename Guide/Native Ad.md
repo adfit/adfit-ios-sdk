@@ -218,7 +218,7 @@ class MyNativeAdView: UIView, AdFitNativeAdRenderable {
 <h5 class="tab-title" data-tab-name="native-sizing">Swift</h5>
 
 ```swift
-func nativeAdDidReceiveAd(_ nativeAd: AdFitNativeAd) {
+func nativeAdLoaderDidReceiveAd(_ nativeAd: AdFitNativeAd) {
     let nativeAdView = MyNativeAdView(frame: view.bounds.divided(atDistance: 300, from: .minYEdge).slice)
     let mediaWidth = nativeAdView.frame.width
     let mediaHeight = mediaWidth / nativeAd.mediaAspectRatio
@@ -231,7 +231,7 @@ func nativeAdDidReceiveAd(_ nativeAd: AdFitNativeAd) {
 <h5 class="tab-title" data-tab-name="native-sizing">Objective-C</h5>
 
 ```objc
-- (void)nativeAdDidReceiveAd:(AdFitNativeAd *)nativeAd {
+- (void)nativeAdLoaderDidReceiveAd:(AdFitNativeAd *)nativeAd {
     MyNativeAdView *nativeAdView = [[MyNativeAdView alloc] initWithFrame:CGRectMake(0.f, 0.f, 300.f, 200.f)];
     CGFloat mediaWidth = nativeAdView.frame.size.width;
     CGFloat mediaHeight = mediaWidth / nativeAd.mediaAspectRatio
@@ -252,11 +252,11 @@ func nativeAdDidReceiveAd(_ nativeAd: AdFitNativeAd) {
 <h5 class="tab-title" data-tab-name="native-delegate">Swift</h5>
 
 ```swift
-func nativeAdDidReceiveAd(_ nativeAd: AdFitNativeAd) {
+func nativeAdLoaderDidReceiveAd(_ nativeAd: AdFitNativeAd) {
     print("didReceiveAd")
 }
     
-func nativeAdDidFailToReceiveAd(_ nativeAd: AdFitNativeAd, error: Error) {
+func nativeAdLoaderDidFailToReceiveAd(_ nativeAd: AdFitNativeAd, error: Error) {
     print("didFailToReceiveAd - error: \(error.localizedDescription)")
 }
 
@@ -269,11 +269,11 @@ func nativeAdDidClickAd(_ nativeAd: AdFitNativeAd) {
 <h5 class="tab-title" data-tab-name="native-delegate">Objective-C</h5>
 
 ```objc
-- (void)nativeAdDidReceiveAd:(AdFitNativeAd *)nativeAd {
+- (void)nativeAdLoaderDidReceiveAd:(AdFitNativeAd *)nativeAd {
 	NSLog(@"didReceiveAd");
 }
 
-- (void)nativeAdDidFailToReceiveAd:(AdFitNativeAd *)nativeAd error:(NSError *)error {
+- (void)nativeAdLoaderDidFailToReceiveAd:(AdFitNativeAd *)nativeAd error:(NSError *)error {
 	NSLog(@"didFailToReceiveAd - error: %@", error.localizedDescription);
 }
 
