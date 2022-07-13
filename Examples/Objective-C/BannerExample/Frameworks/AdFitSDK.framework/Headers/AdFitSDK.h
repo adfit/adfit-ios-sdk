@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VitalMonitor.h"
+#import "AFSDAnimatedImageView.h"
+#import "AFSDAnimatedImageView+WebCache.h"
 
 //! Project version number for AdFitSDK.
 FOUNDATION_EXPORT double AdFitSDKVersionNumber;
