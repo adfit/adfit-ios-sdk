@@ -10,7 +10,19 @@
 
 네이티브 광고를 구성하기 위해서는 `AdFitNativeAdRenderable` 프로토콜을 만족하는 뷰를 직접 구성해야 하지만,
 비즈보드 광고를 쉽게 보여주기 위해서, SDK에서 템플릿을 통해 셀타입과 뷰타입의 템플릿을 제공하고 있습니다. <br>
-따라서 서비스의 UI에 따라 셀타입과 뷰타입중 알맞은 템플릿을 선택하여 사용하시면 될 것 같습니다. 
+따라서 서비스의 UI에 따라 셀타입과 뷰타입중 알맞은 템플릿을 선택하여 사용하시면 될 것 같습니다.
+
+**비즈보드 광고 시작하기** <br>
+비즈보드 광고는 네이티브 광고를 기반으로 AdFit SDK에서는 비즈보드 광고 소재에 적합한 템플릿 레이아웃을 제공하고 있습니다. <br>
+비즈보드 광고를 시작하기 위해 먼저 카카오애드핏 플랫폼에서 자신의 매체를 등록한 후, <br>
+네이티브 광고유형의 광고단위 ID를 발급받아야 합니다. 해당 내용은 [광고단위발급받기](https://github.com/adfit/adfit-ios-sdk/blob/master/Guide/Get%20Client%20ID.md)를 참조 바랍니다. <br>
+
+**AdFit SDK 연동** <br>
+비즈보드 광고 요청을 위해서는 우선 AdFit SDK 연동이 필요합니다. 해당 내용은 [SDK 설치하기](https://github.com/adfit/adfit-ios-sdk/blob/master/Guide/Install%20SDK.md) 를 참조 바랍니다. <br>
+
+**비즈보드 광고 요청하기** <br>
+비즈보드 광고는 네이티브 광고를 기반으로 AdFit SDK에서는 비즈보드 광고 소재에 적합한 템플릿 레이아웃을 제공하고 있습니다. <br>
+비즈보드 광고 요청에 대한 내용은 [네이티브 광고 요청하기](https://github.com/adfit/adfit-ios-sdk/blob/master/Guide/Native%20Ad.md) 를 참조 부탁드립니다. <br>
 
 ### 1) 셀 타입 (UITableViewCell)
 
