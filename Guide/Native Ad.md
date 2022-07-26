@@ -256,7 +256,7 @@ func nativeAdLoaderDidReceiveAd(_ nativeAd: AdFitNativeAd) {
     print("didReceiveAd")
 }
     
-func nativeAdLoaderDidFailToReceiveAd(_ nativeAd: AdFitNativeAd, error: Error) {
+func nativeAdLoaderDidFailToReceiveAd(_ nativeAdLoader: AdFitNativeAdLoader, error: Error) {
     print("didFailToReceiveAd - error: \(error.localizedDescription)")
 }
 
@@ -273,7 +273,7 @@ func nativeAdDidClickAd(_ nativeAd: AdFitNativeAd) {
 	NSLog(@"didReceiveAd");
 }
 
-- (void)nativeAdLoaderDidFailToReceiveAd:(AdFitNativeAd *)nativeAd error:(NSError *)error {
+- (void)nativeAdLoaderDidFailToReceiveAd:(AdFitNativeAdLoader *)nativeAdLoader error:(NSError *)error {
 	NSLog(@"didFailToReceiveAd - error: %@", error.localizedDescription);
 }
 
@@ -285,7 +285,7 @@ func nativeAdDidClickAd(_ nativeAd: AdFitNativeAd) {
 
 
 ## <a name="heading6"></a> 6. 에러 코드
-광고 수신에 실패한 경우, `nativeAdDidFailToReceiveAd` delegate 메서드를 통해 에러 객체를 전달받을 수 있습니다.<br>
+광고 수신에 실패한 경우, `nativeAdLoaderDidFailToReceiveAd` delegate 메서드를 통해 에러 객체를 전달받을 수 있습니다.<br>
 각각의 에러에 대한 설명은 아래 표를 참고해주세요.
 
 |   코드  |               메시지                   |                    설명                               |
