@@ -280,6 +280,10 @@ SWIFT_PROTOCOL("_TtP8AdFitSDK23AdFitNativeAdRenderable_")
 @protocol AdFitNativeAdRenderable
 /// 광고 제목 텍스트를 표시할 <code>UILabel</code> 객체를 리턴하도록 구현하세요.
 - (UILabel * _Nullable)adTitleLabel SWIFT_WARN_UNUSED_RESULT;
+@optional
+/// 광고 본문 텍스트를 표시할 <code>UILable</code> 객체를 리턴하도록 구현하세요.
+- (UILabel * _Nullable)adBodyLabel SWIFT_WARN_UNUSED_RESULT;
+@required
 /// CTA(행동 유도) 버튼 텍스트를 표시할 <code>UIButton</code> 객체를 리턴하도록 구현하세요.
 - (UIButton * _Nullable)adCallToActionButton SWIFT_WARN_UNUSED_RESULT;
 /// 광고주 이름 텍스트를 표시할 <code>UILabel</code> 객체를 리턴하도록 구현하세요.
@@ -463,6 +467,9 @@ SWIFT_CLASS("_TtC8AdFitSDK13AdFitNativeAd")
 /// 네이티브 광고의 제목 텍스트.<br>
 /// 기본값은 <em>nil</em> 이며, 광고 로드 이후 실제 제목 텍스트 값으로 변경됩니다.
 @property (nonatomic, readonly, copy) NSString * _Nullable title;
+/// 네이티브 광고의 본문 텍스트.<br>
+/// 기본값은 <em>nil</em> 이며, 광고 로드 이후 실제 본문 텍스트 값으로 변경됩니다.
+@property (nonatomic, readonly, copy) NSString * _Nullable body;
 /// 네이티브 광고의 프로필명 텍스트.<br>
 /// 기본값은 <em>nil</em> 이며, 광고 로드 이후 실제 프로필명 텍스트 값으로 변경됩니다.
 @property (nonatomic, readonly, copy) NSString * _Nullable profileName;

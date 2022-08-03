@@ -72,7 +72,7 @@ class MyViewController: UIViewController, AdFitNativeAdDelegate {
 ### 1) 네이티브 광고 뷰 구성
 다음은 피드 형태로 네이티브 광고 뷰를 구성한 예입니다.
 
-<img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/native-ad-components2.png" width="640" style="border:1px solid #aaa">
+<img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/native-ad-components3.png" width="640" style="border:1px solid #aaa">
 
 | 번호 | 설명                     | UI 클래스                | AdFitNativeAdRenderable |
 |-----|-------------------------|------------------------|-------------------------|
@@ -82,8 +82,9 @@ class MyViewController: UIViewController, AdFitNativeAdDelegate {
 | 4   | 프로필이미지               | UIImageView             | adProfileIconView()    |
 | 5   | 미디어 (이미지, 동영상 등)    | AdFitMediaView         | adMediaView()           |
 | 6   | 광고 아이콘                |                        |                         |
+| 7   | 홍보문구                  | UILabel                 | adBodyLabel()           |
 
-- AdFit의 네이티브 광고는 위의 6가지 요소로 구성됩니다.
+- AdFit의 네이티브 광고는 위의 7가지 요소로 구성됩니다.
 - 개별 요소들은 위 표에서 대응되는 UI 클래스를 통해 표시되도록 구현해주세요.
 - 사용자가 광고임을 명확히 인지할 수 있도록 "광고", "AD", "Sponsored" 등의 텍스트를 별도로 표시해주셔야 합니다.
 - `5. 미디어` 요소의 경우 SDK에 포함된 `AdFitMediaView` 클래스를 사용하여 표시합니다.<br>
@@ -106,7 +107,8 @@ import AdFit
 
 class MyNativeAdView: UIView, AdFitNativeAdRenderable {
 
-    @IBOutlet weak var titleLabel: UILabel?   
+    @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var bodyLabel: UILabel?
     @IBOutlet weak var callToActionButton: UIButton?
     @IBOutlet weak var profileImageView: UIImageView?
     @IBOutlet weak var profileNameLabel: UILabel?
@@ -115,6 +117,10 @@ class MyNativeAdView: UIView, AdFitNativeAdRenderable {
     // MARK: - AdFitNativeAdRenderable
     func adTitleLabel() -> UILabel? {
         return titleLabel
+    }
+
+    func adBodyLabel() -> UILabel? {
+        return bodyLabel
     }
     
     func adCallToActionButton() -> UIButton? {
@@ -145,6 +151,7 @@ class MyNativeAdView: UIView, AdFitNativeAdRenderable {
 @interface MyNativeAdView () <AdFitNativeAdRenderable>
 
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+@property (nonatomic, weak) IBOutlet UILabel *bodyLabel;
 @property (nonatomic, weak) IBOutlet UIButton *callToActionButton;
 @property (nonatomic, weak) IBOutlet UILabel *profileNameLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *profileIconView;
@@ -157,6 +164,10 @@ class MyNativeAdView: UIView, AdFitNativeAdRenderable {
 #pragma mark - AdFitNativeAdRenderable
 - (UILabel *)adTitleLabel {
     return self.titleLabel;
+}
+
+- (UILabel *)adBodyLabel {
+    return self.bodyLabel;
 }
 
 - (UIButton *)adCallToActionButton {

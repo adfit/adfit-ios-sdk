@@ -116,6 +116,9 @@ extension AdFitSDK.AdFitAdView : AdFitSDK.AdFitMediaViewInternalDelegate {
   @objc final public var title: Swift.String? {
     @objc get
   }
+  @objc final public var body: Swift.String? {
+    @objc get
+  }
   @objc final public var profileName: Swift.String? {
     @objc get
   }
@@ -286,6 +289,7 @@ extension AdFitSDK.AdFit {
 }
 @objc public protocol AdFitNativeAdRenderable {
   @objc func adTitleLabel() -> UIKit.UILabel?
+  @objc optional func adBodyLabel() -> UIKit.UILabel?
   @objc func adCallToActionButton() -> UIKit.UIButton?
   @objc func adProfileNameLabel() -> UIKit.UILabel?
   @objc func adProfileIconView() -> UIKit.UIImageView?
