@@ -481,6 +481,11 @@ SWIFT_CLASS("_TtC8AdFitSDK13AdFitNativeAd")
 /// 네이티브 광고에서 제공하는 커스텀 정보.<br>
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull options;
 @property (nonatomic, strong) UIView * _Nullable adInfoView;
+/// Info Icon 미세 조정<br>
+@property (nonatomic) CGFloat infoIconTopConstant;
+@property (nonatomic) CGFloat infoIconBottomConstant;
+@property (nonatomic) CGFloat infoIconLeftConstant;
+@property (nonatomic) CGFloat infoIconRightConstant;
 /// 네이티브 광고와 사용자 뷰를 바인딩 합니다.
 /// note:
 /// 이 메서드는 네이티브 광고가 로드 된 이후에 호출되어야 합니다. 광고 로드 이전에 호출되면 아무런 동작도 하지 않습니다.

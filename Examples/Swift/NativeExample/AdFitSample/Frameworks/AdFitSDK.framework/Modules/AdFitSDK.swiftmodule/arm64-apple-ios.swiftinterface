@@ -133,6 +133,10 @@ extension AdFitSDK.AdFitAdView : AdFitSDK.AdFitMediaViewInternalDelegate {
     @objc get
     @objc set
   }
+  @objc final public var infoIconTopConstant: CoreGraphics.CGFloat
+  @objc final public var infoIconBottomConstant: CoreGraphics.CGFloat
+  @objc final public var infoIconLeftConstant: CoreGraphics.CGFloat
+  @objc final public var infoIconRightConstant: CoreGraphics.CGFloat
   @objc deinit
   @objc final public func bind(_ nativeAdView: UIKit.UIView)
   @objc final public func block()
