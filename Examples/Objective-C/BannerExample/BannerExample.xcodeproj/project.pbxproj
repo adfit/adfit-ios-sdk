@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B1AC8E81FA9A687006F6311 /* AdFitSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1AC8E61FA9A65F006F6311 /* AdFitSDK.framework */; };
-		2B1AC8E91FA9A687006F6311 /* AdFitSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1AC8E61FA9A65F006F6311 /* AdFitSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2728E97F2962C89500C01511 /* AdFitSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2728E97E2962C89500C01511 /* AdFitSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C257759C1FA1F3BD00F5FC0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C257759B1FA1F3BD00F5FC0C /* AppDelegate.m */; };
 		C257759F1FA1F3BD00F5FC0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C257759E1FA1F3BD00F5FC0C /* ViewController.m */; };
 		C25775A21FA1F3BD00F5FC0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25775A01FA1F3BD00F5FC0C /* Main.storyboard */; };
@@ -24,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2B1AC8E91FA9A687006F6311 /* AdFitSDK.framework in Embed Frameworks */,
+				2728E97F2962C89500C01511 /* AdFitSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,7 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2B1AC8E61FA9A65F006F6311 /* AdFitSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdFitSDK.framework; sourceTree = "<group>"; };
+		2728E97E2962C89500C01511 /* AdFitSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AdFitSDK.xcframework; sourceTree = "<group>"; };
 		C25775971FA1F3BD00F5FC0C /* BannerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BannerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C257759A1FA1F3BD00F5FC0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C257759B1FA1F3BD00F5FC0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,27 +49,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B1AC8E81FA9A687006F6311 /* AdFitSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B1AC8E51FA9A65F006F6311 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2B1AC8E61FA9A65F006F6311 /* AdFitSDK.framework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		C257758E1FA1F3BD00F5FC0C = {
 			isa = PBXGroup;
 			children = (
 				C25775991FA1F3BD00F5FC0C /* BannerExample */,
+				2728E97E2962C89500C01511 /* AdFitSDK.xcframework */,
 				C25775981FA1F3BD00F5FC0C /* Products */,
-				2B1AC8E51FA9A65F006F6311 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,7 +99,6 @@
 				C25775941FA1F3BD00F5FC0C /* Frameworks */,
 				C25775951FA1F3BD00F5FC0C /* Resources */,
 				C25775CC1FA1FB5700F5FC0C /* Embed Frameworks */,
-				2BF8981D1FCD85B600F8079D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -165,22 +154,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2BF8981D1FCD85B600F8079D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/AdFitSDK.framework/strip-frameworks.sh\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C25775931FA1F3BD00F5FC0C /* Sources */ = {
@@ -339,8 +312,11 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = BannerExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.adfit.BannerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,8 +335,11 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = BannerExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.adfit.BannerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -8,7 +8,7 @@
 
 import UIKit
 
-let bizBoardAdUnitId = "Input your adUnitID"
+let bizBoardAdUnitId = "광고단위를 입력 해주세요."
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

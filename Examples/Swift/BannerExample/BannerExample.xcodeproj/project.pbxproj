@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B36F9331FCCF9CA00740F47 /* AdFitSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B36F9311FCCF9BF00740F47 /* AdFitSDK.framework */; };
-		2B36F9341FCCF9CA00740F47 /* AdFitSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B36F9311FCCF9BF00740F47 /* AdFitSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		270EECAA2962C99100DD60DB /* AdFitSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2728E9802962C97F00C01511 /* AdFitSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2728E9812962C97F00C01511 /* AdFitSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2728E9802962C97F00C01511 /* AdFitSDK.xcframework */; };
 		C25775761FA1D69C00F5FC0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25775751FA1D69C00F5FC0C /* AppDelegate.swift */; };
 		C25775781FA1D69C00F5FC0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25775771FA1D69C00F5FC0C /* ViewController.swift */; };
 		C257757B1FA1D69C00F5FC0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25775791FA1D69C00F5FC0C /* Main.storyboard */; };
@@ -23,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2B36F9341FCCF9CA00740F47 /* AdFitSDK.framework in Embed Frameworks */,
+				270EECAA2962C99100DD60DB /* AdFitSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,7 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2B36F9311FCCF9BF00740F47 /* AdFitSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdFitSDK.framework; sourceTree = "<group>"; };
+		2728E9802962C97F00C01511 /* AdFitSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AdFitSDK.xcframework; sourceTree = "<group>"; };
 		C25775721FA1D69C00F5FC0C /* BannerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BannerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25775751FA1D69C00F5FC0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C25775771FA1D69C00F5FC0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B36F9331FCCF9CA00740F47 /* AdFitSDK.framework in Frameworks */,
+				2728E9812962C97F00C01511 /* AdFitSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,7 @@
 		2B6887B21FA99D5000A80D3F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2B36F9311FCCF9BF00740F47 /* AdFitSDK.framework */,
+				2728E9802962C97F00C01511 /* AdFitSDK.xcframework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -102,7 +102,6 @@
 				C257756F1FA1D69C00F5FC0C /* Frameworks */,
 				C25775701FA1D69C00F5FC0C /* Resources */,
 				2B36F92A1FCCF85500740F47 /* Embed Frameworks */,
-				2BF8981C1FCD84F300F8079D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -160,22 +159,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2BF8981C1FCD84F300F8079D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/AdFitSDK.framework/strip-frameworks.sh\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C257756E1FA1D69C00F5FC0C /* Sources */ = {
@@ -260,7 +243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -315,10 +298,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VALIDATE_WORKSPACE = YES;
 			};
@@ -336,7 +320,10 @@
 				);
 				INFOPLIST_FILE = BannerExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.adfit.BannerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,7 +344,10 @@
 				);
 				INFOPLIST_FILE = BannerExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.adfit.BannerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

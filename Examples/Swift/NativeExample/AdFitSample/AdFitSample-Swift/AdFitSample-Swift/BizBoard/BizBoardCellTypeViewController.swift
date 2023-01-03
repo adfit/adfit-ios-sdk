@@ -26,17 +26,20 @@ class BizBoardCellTypeViewController: UIViewController, UITableViewDataSource, U
     var adViewHeight: CGFloat {
         let deviceWidth = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
         
-        // 여백을 인스턴스별로도 설정 가능하지만, 여기서는 스태틱 값을 사용해서 표시해주므로,
-        // 전체 뷰 높이와 너비는 변하지 않을 수 있다.
+        //비즈보드셀 전역 커스텀 설정
+        //BizBoardCell.defaultEdgeInset.left = 16
+        //BizBoardCell.defaultEdgeInset.right = 16
+        //BizBoardCell.defaultEdgeInset.top = 16
+        //BizBoardCell.defaultEdgeInset.bottom = 16
+        //BizBoardCell.defaultBackgroundColor = .yellow
         
-        // 좌우여백을 제외한 실제 width
-        let rWidth = (deviceWidth - (BizBoardCell.defaultEdgeInset.left + BizBoardCell.defaultEdgeInset.right))
-        
-        // 비율로 계산된 실제 height
-        let rHeight = rWidth / (1029 / 222)
-        
-        // 상하여백을 포함한 셀 높이
-        let cellHeight = rHeight + (BizBoardCell.defaultEdgeInset.top + BizBoardCell.defaultEdgeInset.bottom)
+        // 뷰타입과 다르게 셀타입에서는 비즈보드 개별 여백 설정이 아닌 기본 여백 설정값을 이용하였다.
+        let leftRightMargin = BizBoardCell.defaultEdgeInset.left + BizBoardCell.defaultEdgeInset.right; // 비즈보드 좌우 마진의 합
+        let topBottomMargin = BizBoardCell.defaultEdgeInset.top + BizBoardCell.defaultEdgeInset.bottom; // 비즈보드 상하 마진의 합
+        let bizBoardWidth = deviceWidth - leftRightMargin; // 뷰의 실제 너비에서 좌우 마진값을 빼주면 비즈보드 너비가 나온다.
+        let bizBoardRatio = 1029.0 / 222.0; // 비즈보드 이미지의 비율
+        let bizBoardHeight: CGFloat = bizBoardWidth / bizBoardRatio; // 비즈보드 너비에서 비율값을 나눠주면 비즈보드 높이를 계산 할 수 있다.
+        let cellHeight = bizBoardHeight + topBottomMargin; // 비즈보드 높이에서 상하 마진값을 더해주면 실제 그려줄 뷰의 높이를 알 수 있다.
         
         return cellHeight
     }
@@ -171,6 +174,9 @@ class BizBoardCellTypeViewController: UIViewController, UITableViewDataSource, U
             //cell.bgViewBottomMargin = 8
             
             if let nativeAd = nativeAd {
+                //인포아이콘 조정은 바인드 전에 이뤄줘야 한다.
+                nativeAd.infoIconRightConstant = -20 // 좌로 20 이동
+                nativeAd.infoIconTopConstant = 5    // 아래로 5
                 nativeAd.bind(cell)
                 nativeAd.delegate = self
             }

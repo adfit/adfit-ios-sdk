@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270EECAF2962CD2300DD60DB /* AdFitSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 270EECAE2962CD2300DD60DB /* AdFitSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C221654E286EBE4E00EAC43D /* BizBoardViewTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C221654D286EBE4E00EAC43D /* BizBoardViewTypeViewController.swift */; };
 		C2216550286EBE6100EAC43D /* BizBoardCellTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C221654F286EBE6100EAC43D /* BizBoardCellTypeViewController.swift */; };
 		C2216552286EC6BC00EAC43D /* BizBoardViewTypeVCRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2216551286EC6BC00EAC43D /* BizBoardViewTypeVCRepresentable.swift */; };
@@ -25,8 +26,6 @@
 		C23EF5AD2470229A0022236F /* MyNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23EF5AA2470229A0022236F /* MyNativeAdView.xib */; };
 		C23EF5AE2470229A0022236F /* MyNativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EF5AB2470229A0022236F /* MyNativeAdView.swift */; };
 		C23EF5AF2470229A0022236F /* NativeAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EF5AC2470229A0022236F /* NativeAdViewController.swift */; };
-		C23EF5B2247023670022236F /* AdFitSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23EF5B1247023670022236F /* AdFitSDK.framework */; };
-		C23EF5B3247023670022236F /* AdFitSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C23EF5B1247023670022236F /* AdFitSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C23EF5B62470259D0022236F /* BannerAdVCRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EF5B52470259D0022236F /* BannerAdVCRepresentable.swift */; };
 		C23EF5B824702BC20022236F /* NativeAdVCRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EF5B724702BC20022236F /* NativeAdVCRepresentable.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +37,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C23EF5B3247023670022236F /* AdFitSDK.framework in Embed Frameworks */,
+				270EECAF2962CD2300DD60DB /* AdFitSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		270EECAE2962CD2300DD60DB /* AdFitSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AdFitSDK.xcframework; path = ../Frameworks/AdFitSDK.xcframework; sourceTree = "<group>"; };
 		C221654D286EBE4E00EAC43D /* BizBoardViewTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizBoardViewTypeViewController.swift; sourceTree = "<group>"; };
 		C221654F286EBE6100EAC43D /* BizBoardCellTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizBoardCellTypeViewController.swift; sourceTree = "<group>"; };
 		C2216551286EC6BC00EAC43D /* BizBoardViewTypeVCRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizBoardViewTypeVCRepresentable.swift; sourceTree = "<group>"; };
@@ -66,7 +66,6 @@
 		C23EF5AA2470229A0022236F /* MyNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyNativeAdView.xib; sourceTree = "<group>"; };
 		C23EF5AB2470229A0022236F /* MyNativeAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNativeAdView.swift; sourceTree = "<group>"; };
 		C23EF5AC2470229A0022236F /* NativeAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdViewController.swift; sourceTree = "<group>"; };
-		C23EF5B1247023670022236F /* AdFitSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdFitSDK.framework; path = ../Frameworks/AdFitSDK.framework; sourceTree = "<group>"; };
 		C23EF5B52470259D0022236F /* BannerAdVCRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdVCRepresentable.swift; sourceTree = "<group>"; };
 		C23EF5B724702BC20022236F /* NativeAdVCRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdVCRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C23EF5B2247023670022236F /* AdFitSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +170,7 @@
 		C23EF5B0247023670022236F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C23EF5B1247023670022236F /* AdFitSDK.framework */,
+				270EECAE2962CD2300DD60DB /* AdFitSDK.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
