@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2798A3BD292F203200A7BF28 /* AdFitSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2798A3BC292F203200A7BF28 /* AdFitSDK.xcframework */; };
+		270EECB52965725100DD60DB /* AdFitSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 270EECB42965725100DD60DB /* AdFitSDK */; };
 		27E9C18E292C9C1D00EFC069 /* ViewTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E9C18D292C9C1D00EFC069 /* ViewTypeController.m */; };
 		27E9C191292C9C2B00EFC069 /* CellTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E9C190292C9C2B00EFC069 /* CellTypeController.m */; };
 		27FA30BB292C6F83004393E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FA30BA292C6F83004393E0 /* AppDelegate.m */; };
@@ -20,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2798A3BC292F203200A7BF28 /* AdFitSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AdFitSDK.xcframework; sourceTree = "<group>"; };
 		27E9C18C292C9C1D00EFC069 /* ViewTypeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewTypeController.h; sourceTree = "<group>"; };
 		27E9C18D292C9C1D00EFC069 /* ViewTypeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewTypeController.m; sourceTree = "<group>"; };
 		27E9C18F292C9C2B00EFC069 /* CellTypeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellTypeController.h; sourceTree = "<group>"; };
@@ -44,27 +43,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2798A3BD292F203200A7BF28 /* AdFitSDK.xcframework in Frameworks */,
+				270EECB52965725100DD60DB /* AdFitSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2798A3BB292F203200A7BF28 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2798A3BC292F203200A7BF28 /* AdFitSDK.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		27FA30AD292C6F83004393E0 = {
 			isa = PBXGroup;
 			children = (
 				27FA30B8292C6F83004393E0 /* BizboardSample */,
 				27FA30B7292C6F83004393E0 /* Products */,
-				2798A3BB292F203200A7BF28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +105,7 @@
 			);
 			name = BizboardSample;
 			packageProductDependencies = (
+				270EECB42965725100DD60DB /* AdFitSDK */,
 			);
 			productName = BizboardSample;
 			productReference = 27FA30B6292C6F83004393E0 /* BizboardSample.app */;
@@ -144,6 +135,7 @@
 			);
 			mainGroup = 27FA30AD292C6F83004393E0;
 			packageReferences = (
+				270EECB32965725100DD60DB /* XCRemoteSwiftPackageReference "adfit-spm" */,
 			);
 			productRefGroup = 27FA30B7292C6F83004393E0 /* Products */;
 			projectDirPath = "";
@@ -393,6 +385,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		270EECB32965725100DD60DB /* XCRemoteSwiftPackageReference "adfit-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adfit/adfit-spm.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.12.18;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		270EECB42965725100DD60DB /* AdFitSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 270EECB32965725100DD60DB /* XCRemoteSwiftPackageReference "adfit-spm" */;
+			productName = AdFitSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27FA30AE292C6F83004393E0 /* Project object */;
 }

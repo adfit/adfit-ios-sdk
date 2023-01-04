@@ -1,5 +1,6 @@
 # AdFit iOS SDK
 
+> AdFit SDK 3.12.19 버전부터 Cocoapod 으로 제공되는 프레임워크 형태가 xcframework로 변경되었습니다.  
 
 > AdFit SDK 3.12.18 버전부터 iOS 최소 지원 버전이 13.0으로 상향 되었습니다. 13.0 미만의 iOS 버전을
 지원해야 한다면 3.12.7 버전 사용을 부탁드립니다. 

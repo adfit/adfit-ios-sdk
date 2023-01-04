@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		270EECAA2962C99100DD60DB /* AdFitSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2728E9802962C97F00C01511 /* AdFitSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2728E9812962C97F00C01511 /* AdFitSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2728E9802962C97F00C01511 /* AdFitSDK.xcframework */; };
+		270EECB82965728000DD60DB /* AdFitSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 270EECB72965728000DD60DB /* AdFitSDK */; };
 		C25775761FA1D69C00F5FC0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25775751FA1D69C00F5FC0C /* AppDelegate.swift */; };
 		C25775781FA1D69C00F5FC0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25775771FA1D69C00F5FC0C /* ViewController.swift */; };
 		C257757B1FA1D69C00F5FC0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25775791FA1D69C00F5FC0C /* Main.storyboard */; };
@@ -23,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				270EECAA2962C99100DD60DB /* AdFitSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,7 +29,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2728E9802962C97F00C01511 /* AdFitSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AdFitSDK.xcframework; sourceTree = "<group>"; };
 		C25775721FA1D69C00F5FC0C /* BannerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BannerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25775751FA1D69C00F5FC0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C25775771FA1D69C00F5FC0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,27 +43,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2728E9812962C97F00C01511 /* AdFitSDK.xcframework in Frameworks */,
+				270EECB82965728000DD60DB /* AdFitSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B6887B21FA99D5000A80D3F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2728E9802962C97F00C01511 /* AdFitSDK.xcframework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		C25775691FA1D69C00F5FC0C = {
 			isa = PBXGroup;
 			children = (
 				C25775741FA1D69C00F5FC0C /* BannerExample */,
 				C25775731FA1D69C00F5FC0C /* Products */,
-				2B6887B21FA99D5000A80D3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +96,9 @@
 			dependencies = (
 			);
 			name = BannerExample;
+			packageProductDependencies = (
+				270EECB72965728000DD60DB /* AdFitSDK */,
+			);
 			productName = BannerExample;
 			productReference = C25775721FA1D69C00F5FC0C /* BannerExample.app */;
 			productType = "com.apple.product-type.application";
@@ -138,6 +129,9 @@
 				Base,
 			);
 			mainGroup = C25775691FA1D69C00F5FC0C;
+			packageReferences = (
+				270EECB62965728000DD60DB /* XCRemoteSwiftPackageReference "adfit-spm" */,
+			);
 			productRefGroup = C25775731FA1D69C00F5FC0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -378,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		270EECB62965728000DD60DB /* XCRemoteSwiftPackageReference "adfit-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adfit/adfit-spm.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.12.18;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		270EECB72965728000DD60DB /* AdFitSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 270EECB62965728000DD60DB /* XCRemoteSwiftPackageReference "adfit-spm" */;
+			productName = AdFitSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C257756A1FA1D69C00F5FC0C /* Project object */;
 }

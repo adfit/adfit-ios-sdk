@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MyNativeAdView" customModule="AdFitSample_Swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="302"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ck3-UE-Prc" userLabel="Icon Image View">
+                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Ep6-XT-JQd"/>
+                        <constraint firstAttribute="height" constant="50" id="mHL-TC-X1Y"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqi-zs-dYH" userLabel="Title Label">
+                    <rect key="frame" x="66" y="13" width="215" height="19.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="250" id="ZGu-y0-DTd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsO-y2-Moc" userLabel="Profile Label">
+                    <rect key="frame" x="66" y="35.5" width="215" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="250" id="VFe-nK-Yvy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LHK-sy-XuL" userLabel="Media View" customClass="AdFitMediaView" customModule="AdFitSDK">
+                    <rect key="frame" x="0.0" y="66" width="331" height="172"/>
+                </view>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efF-lV-lAs" userLabel="Action Button">
+                    <rect key="frame" x="221" y="247" width="102" height="46"/>
+                    <color key="backgroundColor" red="0.96993559598922729" green="0.49784306182824584" blue="0.28622590381304741" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="9da-V4-O5h"/>
+                        <constraint firstAttribute="width" constant="102" id="mbO-LR-7BP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Action">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="kqi-zs-dYH" firstAttribute="leading" secondItem="ck3-UE-Prc" secondAttribute="trailing" constant="8" id="BiZ-lf-Dez"/>
+                <constraint firstItem="OsO-y2-Moc" firstAttribute="top" secondItem="kqi-zs-dYH" secondAttribute="bottom" constant="3" id="Dhk-tW-yHq"/>
+                <constraint firstItem="efF-lV-lAs" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-9" id="GVC-sT-7nt"/>
+                <constraint firstItem="kqi-zs-dYH" firstAttribute="top" secondItem="ck3-UE-Prc" secondAttribute="top" constant="5" id="HoZ-PH-Uze"/>
+                <constraint firstItem="efF-lV-lAs" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-8" id="Lkz-Pp-s5A"/>
+                <constraint firstItem="LHK-sy-XuL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="66" id="MME-sT-4he"/>
+                <constraint firstItem="OsO-y2-Moc" firstAttribute="trailing" secondItem="kqi-zs-dYH" secondAttribute="trailing" id="RTp-pd-cZM"/>
+                <constraint firstItem="LHK-sy-XuL" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="S9W-gW-u98"/>
+                <constraint firstItem="OsO-y2-Moc" firstAttribute="leading" secondItem="kqi-zs-dYH" secondAttribute="leading" id="bIl-dR-e73"/>
+                <constraint firstItem="ck3-UE-Prc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="fEq-y6-ZIb"/>
+                <constraint firstItem="kqi-zs-dYH" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-50" id="pRg-T8-0tU"/>
+                <constraint firstItem="LHK-sy-XuL" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-64" id="rjv-Kv-KzC"/>
+                <constraint firstItem="LHK-sy-XuL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vcu-8b-Gkm"/>
+                <constraint firstItem="ck3-UE-Prc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="zsh-1Q-1bI"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="actionButton" destination="efF-lV-lAs" id="wLS-I6-Zng"/>
+                <outlet property="iconImageView" destination="ck3-UE-Prc" id="FqP-0O-tWP"/>
+                <outlet property="mediaView" destination="LHK-sy-XuL" id="9bf-hP-aJe"/>
+                <outlet property="profileLabel" destination="OsO-y2-Moc" id="OVO-h3-YCb"/>
+                <outlet property="titleLabel" destination="kqi-zs-dYH" id="22G-mK-jAI"/>
+            </connections>
+            <point key="canvasLocation" x="-439.5" y="60"/>
+        </view>
+    </objects>
+</document>

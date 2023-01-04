@@ -1,7 +1,7 @@
 {
   "authors": "AdFit",
   "description": "AdFit Ad SDK for Publisher",
-  "version": "3.12.18",
+  "version": "3.12.19",
   "homepage": "https://github.com/adfit/adfit-ios-sdk.git",
   "license": {
     "type": "Apache License, Version 2.0",
@@ -12,22 +12,8 @@
     "ios": "13.0"
   },
   "source": {
-    "git": "https://github.com/adfit/adfit-ios-sdk.git",
-    "tag": "3.12.18"
+    "http": "https://github.com/adfit/adfit-ios-sdk/raw/3.12.19/XCFramework/AdFitSDK.xcframework.zip"
   },
   "summary": "AdFit Ad SDK",
-  "preserve_paths": "Frameworks/*.framework",
-  "vendored_frameworks": "Frameworks/AdFitSDK.framework",
-  "frameworks": [
-    "AdSupport",
-    "CoreTelephony",
-    "SystemConfiguration",
-    "WebKit"
-  ],
-  "pod_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
-  },
-  "user_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
-  }
+  "vendored_frameworks": "AdFitSDK.xcframework"
 }
