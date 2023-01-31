@@ -31,12 +31,12 @@ class CellTypeController: UIViewController, UITableViewDataSource, UITableViewDe
         //BizBoardCell.defaultBackgroundColor = .yellow
         
         // 뷰타입과 다르게 셀타입에서는 비즈보드 개별 여백 설정이 아닌 기본 여백 설정값을 이용하였다.
-        let leftRightMargin = BizBoardCell.defaultEdgeInset.left + BizBoardCell.defaultEdgeInset.right; // 비즈보드 좌우 마진의 합
-        let topBottomMargin = BizBoardCell.defaultEdgeInset.top + BizBoardCell.defaultEdgeInset.bottom; // 비즈보드 상하 마진의 합
-        let bizBoardWidth = deviceWidth - leftRightMargin; // 뷰의 실제 너비에서 좌우 마진값을 빼주면 비즈보드 너비가 나온다.
-        let bizBoardRatio = 1029.0 / 222.0; // 비즈보드 이미지의 비율
-        let bizBoardHeight: CGFloat = bizBoardWidth / bizBoardRatio; // 비즈보드 너비에서 비율값을 나눠주면 비즈보드 높이를 계산 할 수 있다.
-        let cellHeight = bizBoardHeight + topBottomMargin; // 비즈보드 높이에서 상하 마진값을 더해주면 실제 그려줄 뷰의 높이를 알 수 있다.
+        let leftRightMargin = BizBoardCell.defaultEdgeInset.left + BizBoardCell.defaultEdgeInset.right // 비즈보드 좌우 마진의 합
+        let topBottomMargin = BizBoardCell.defaultEdgeInset.top + BizBoardCell.defaultEdgeInset.bottom // 비즈보드 상하 마진의 합
+        let bizBoardWidth = deviceWidth - leftRightMargin // 뷰의 실제 너비에서 좌우 마진값을 빼주면 비즈보드 너비가 나온다.
+        let bizBoardRatio = 1029.0 / 222.0 // 비즈보드 이미지의 비율
+        let bizBoardHeight: CGFloat = bizBoardWidth / bizBoardRatio // 비즈보드 너비에서 비율값을 나눠주면 비즈보드 높이를 계산 할 수 있다.
+        let cellHeight = bizBoardHeight + topBottomMargin // 비즈보드 높이에서 상하 마진값을 더해주면 실제 그려줄 뷰의 높이를 알 수 있다.
         
         return cellHeight
     }

@@ -20,11 +20,12 @@
 
 ## <a name="heading2"></a> 1. 비즈보드 템플릿 타입 선택
 
-네이티브 광고를 구성하기 위해서는 `AdFitNativeAdRenderable` 프로토콜을 만족하는 뷰를 직접 구성해야 하지만,
+네이티브 광고를 구성하기 위해서는 `AdFitNativeAdRenderable` 프로토콜을 만족하는 뷰를 직접 구성해야 하지만, <br>
 비즈보드 광고를 쉽게 보여주기 위해서, SDK에서 템플릿을 통해 셀타입과 뷰타입의 템플릿을 제공하고 있습니다. <br>
 따라서 서비스의 UI에 따라 셀타입과 뷰타입중 알맞은 템플릿을 선택하여 사용하시면 될 것 같습니다.
 
 ### 1) 셀 타입 (UITableViewCell)
+* `UITableViewCell` 을 상속받은 `BizBoardCell`
 
 ```swift
 private let adCellName = "BizBoardListFeedAdTableViewCell"
@@ -37,6 +38,7 @@ override func viewDidLoad() {
 ```
 
 ### 2) 뷰 타입 (UIView)
+* `UIView` 를 상속받은 `BizBoardTemplate`
 
 ```swift
 lazy var nativeAdView = BizBoardTemplate()
@@ -152,11 +154,16 @@ override func viewDidLoad() {
 
         view.addSubview(nativeAdView) // 위에서 선언한 nativeAdView를 addSubView 해줍니다.
         
-        // nativeAdView의 높이와 너비는 다음과 같이 설정해주세요. 자세한 설명은 3.광고뷰의 높이 가변 처리 부분에서 자세히 다루겠습니다.
-        let width = view.frame.width
-        let height = (view.frame.width - BizBoardTemplate.defaultEdgeInset.left + BizBoardTemplate.defaultEdgeInset.right) / (1029 / 222) + BizBoardTemplate.defaultEdgeInset.top + BizBoardTemplate.defaultEdgeInset.bottom
+        // nativeAdView의 높이와 너비는 다음과 같이 설정해주세요. 자세한 설명은 4.광고뷰의 너비 및 높이 설정에서 자세히 다루겠습니다.
+        let viewWidth = view.frame.width
+        let leftRightMargin = nativeAdView.bgViewleftMargin + nativeAdView.bgViewRightMargin
+        let topBottomMargin = nativeAdView.bgViewTopMargin + nativeAdView.bgViewBottomMargin
+        let bizBoardWidth = viewWidth - leftRightMargin
+        let bizBoardRatio = 1029.0 / 258.0
+        let bizBoardHeight = bizBoardWidth / bizBoardRatio
+        let viewHeight = bizBoardHeight + topBottomMargin
 
-        nativeAdView.frame.size = CGSize(width: width, height: height) // nativeAdView의 프레임을 설정 합니다.
+        nativeAdView.frame.size = CGSize(width: viewWidth, height: viewHeight) // nativeAdView의 프레임을 설정 합니다.
                 
         nativeAdLoader = AdFitNativeAdLoader(clientId: "INPUT YOUR AdUnit ID") // 발급받은 adUnitId를 clientId에 넣고 AdFitNativeAdLoader 를 생성합니다.
         nativeAdLoader?.delegate = self // nativeAdLoader 의 델리게이트를 설정합니다.
@@ -173,20 +180,36 @@ override func viewDidLoad() {
 * 광고뷰의 높이는 다음과 같이 처리 하도록 합니다. 
 * 여백을 따로 커스텀하게 처리하지 않았거나, 전역설정을 통해 처리 하였다면 아래와 같이 설정 해주면 됩니다. 
 
-* (추가적으로 아래의 코드에 대하여 설명한다면 설정한 광고뷰의 너비에서 설정된 좌우 여백을 뺀 후 1029 / 222 비율로 나눠 줍니다. <br>
-1029 / 222 의 비율은 비즈보드에 표시되는 원본 이미지의 비율입니다. 고정값으로 사용하시면 됩니다. <br>
+```
+    let viewWidth = view.frame.width
+    let leftRightMargin = BizBoardTemplate.defaultEdgeInset.left + BizBoardTemplate.defaultEdgeInset.right
+    let topBottomMargin = BizBoardTemplate.defaultEdgeInset.top + BizBoardTemplate.defaultEdgeInset.bottom
+    let bizBoardWidth = viewWidth - leftRightMargin
+    let bizBoardRatio = 1029.0 / 258.0
+    let bizBoardHeight = bizBoardWidth / bizBoardRatio
+    let viewHeight = bizBoardHeight + topBottomMargin
+
+```
+
+* (추가적으로 아래의 코드에 대하여 설명한다면 설정한 광고뷰의 너비에서 설정된 좌우 여백을 뺀 후 1029 / 258 비율로 나눠 줍니다. <br>
+1029 / 258 의 비율은 비즈보드에 표시되는 원본 이미지의 비율입니다. 고정값으로 사용하시면 됩니다. <br>
 이제 계산된 값에 설정된 광고뷰의 상하여백을 더해준 값을 광고뷰의 높이로 설정 하시면 됩니다. 
 )
 
 * 인스턴스 별로 여백을 커스텀하게 설정하였다면, <br>
- 좌측 여백을 커스텀 하였다면, BizBoardTemplate.defaultEdgeInset.left 대신 설정한 값을 넣어 주면 됩니다. <br>
- 우측 여백을 커스텀 하였다면, BizBoardTemplate.defaultEdgeInset.right 대신 설정한 값을 넣어 주면 됩니다. <br>
- 상측 여백을 커스텀 하였다면, BizBoardTemplate.defaultEdgeInset.top 대신 설정한 값을 넣어 주면 됩니다. <br>
- 하측 여백을 커스텀 하였다면, BizBoardTemplate.defaultEdgeInset.bottom 대신 설정한 값을 넣어 주면 됩니다. <br>
+ 좌측 여백을 커스텀 하였다면, BizBoardTemplate.defaultEdgeInset.left 대신 `bgViewleftMargin` 값을 넣어 주면 됩니다. <br>
+ 우측 여백을 커스텀 하였다면, BizBoardTemplate.defaultEdgeInset.right 대신 `bgViewRightMargin` 값을 넣어 주면 됩니다. <br>
+ 상측 여백을 커스텀 하였다면, BizBoardTemplate.defaultEdgeInset.top 대신 `bgViewTopMargin` 값을 넣어 주면 됩니다. <br>
+ 하측 여백을 커스텀 하였다면, BizBoardTemplate.defaultEdgeInset.bottom 대신 `bgViewBottomMargin` 값을 넣어 주면 됩니다. <br>
 
 ```
-    let width = view.frame.width
-    let height = (view.frame.width - BizBoardTemplate.defaultEdgeInset.left + BizBoardTemplate.defaultEdgeInset.right) / (1029 / 222) + BizBoardTemplate.defaultEdgeInset.top + BizBoardTemplate.defaultEdgeInset.bottom
+    let viewWidth = view.frame.width
+    let leftRightMargin = nativeAdView.bgViewleftMargin + nativeAdView.bgViewRightMargin
+    let topBottomMargin = nativeAdView.bgViewTopMargin + nativeAdView.bgViewBottomMargin
+    let bizBoardWidth = viewWidth - leftRightMargin
+    let bizBoardRatio = 1029.0 / 258.0
+    let bizBoardHeight = bizBoardWidth / bizBoardRatio
+    let viewHeight = bizBoardHeight + topBottomMargin
 
 ```
 
@@ -194,8 +217,8 @@ override func viewDidLoad() {
 * 광고셀 높이를 미리 지정한 여백에 따라 계산해 놓습니다.
 ** 너비를 구하는 방법은 예제에서는 광고뷰의 슈퍼뷰의 너비 또는 디바이스의 너비를 사용하고 있지만 자유롭게 설정하시면 됩니다.
 ** 너비값을 토대로 너비값에 좌우 여백을 빼줍니다. 
-** 위에서 계산된 값을 1029/222의 비율로 나눠 줍니다. 
-** 1029/222 는 비즈보드 이미지의 원본 비율입니다. 
+** 위에서 계산된 값을 1029/258의 비율로 나눠 줍니다. 
+** 1029/258 은 비즈보드 이미지의 원본 비율입니다. 
 ** 계산된 값에 상하여백을 더해준 값이 광고셀의 높이 입니다. 
 
 * `tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath)` 에서 광고셀 높이 설정
@@ -208,22 +231,17 @@ override func viewDidLoad() {
 
 //광고셀의 높이는 기기에 따라서 항상 고정이 되도록 설정 한다.
 var adViewHeight: CGFloat {
-    let deviceWidth = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+    let deviceWidth = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height) // 디바이스 너비
         
-    // 여백을 인스턴스별로도 설정 가능하지만, 여기서는 스태틱 값을 사용해서 표시해주므로,
-    // 전체 뷰 높이와 너비는 변하지 않을 수 있다.
-        
-    // 좌우여백을 제외한 실제 width
-    let rWidth = (deviceWidth - (BizBoardCell.defaultEdgeInset.left + BizBoardCell.defaultEdgeInset.right))
-        
-    // 비율로 계산된 실제 height
-    let rHeight = rWidth / (1029 / 222)
-        
-    // 상하여백을 포함한 셀 높이
-    let cellHeight = rHeight + (BizBoardCell.defaultEdgeInset.top + BizBoardCell.defaultEdgeInset.bottom)
-    //let cellWidth = (deviceWidth - (BizBoardTemplate.edgeInset.left + BizBoardTemplate.edgeInset.right)) / (1029 / 222) + BizBoardTemplate.edgeInset.top + BizBoardTemplate.edgeInset.bottom
-        
-    return cellHeight//cellWidth + 8
+    // 뷰타입과 다르게 셀타입에서는 비즈보드 개별 여백 설정이 아닌 기본 여백 설정값을 이용하였다.
+    let leftRightMargin = BizBoardCell.defaultEdgeInset.left + BizBoardCell.defaultEdgeInset.right // 비즈보드 좌우 마진의 합
+    let topBottomMargin = BizBoardCell.defaultEdgeInset.top + BizBoardCell.defaultEdgeInset.bottom // 비즈보드 상하 마진의 합
+    let bizBoardWidth = deviceWidth - leftRightMargin // 뷰의 실제 너비에서 좌우 마진값을 빼주면 비즈보드 너비가 나온다.
+    let bizBoardRatio = 1029.0 / 258.0 // 비즈보드 이미지의 비율
+    let bizBoardHeight: CGFloat = bizBoardWidth / bizBoardRatio // 비즈보드 너비에서 비율값을 나눠주면 비즈보드 높이를 계산 할 수 있다.
+    let cellHeight = bizBoardHeight + topBottomMargin // 비즈보드 높이에서 상하 마진값을 더해주면 실제 그려줄 뷰의 높이를 알 수 있다.    
+    
+    return cellHeight
 }
 
 
@@ -255,10 +273,15 @@ override func viewDidLoad() {
 
     ...
 
-    let width = view.frame.width
-    let height = (view.frame.width - BizBoardTemplate.defaultEdgeInset.left + BizBoardTemplate.defaultEdgeInset.right) / (1029 / 222) + BizBoardTemplate.defaultEdgeInset.top + BizBoardTemplate.defaultEdgeInset.bottom
+    let viewWidth = view.frame.width // 실제 뷰의 너비
+    let leftRightMargin = nativeAdView.bgViewleftMargin + nativeAdView.bgViewRightMargin // 비즈보드 좌우 마진의 합
+    let topBottomMargin = nativeAdView.bgViewTopMargin + nativeAdView.bgViewBottomMargin // 비즈보드 상하 마진의 합
+    let bizBoardWidth = viewWidth - leftRightMargin // 뷰의 실제 너비에서 좌우 마진값을 빼주면 비즈보드 너비가 나온다.
+    let bizBoardRatio = 1029.0 / 258.0 // 비즈보드 이미지의 비율
+    let bizBoardHeight = bizBoardWidth / bizBoardRatio // 비즈보드 너비에서 비율값을 나눠주면 비즈보드 높이를 계산 할 수 있다.
+    let viewHeight = bizBoardHeight + topBottomMargin // 비즈보드 높이에서 상하 마진값을 더해주면 실제 그려줄 뷰의 높이를 알 수 있다.
 
-    nativeAdView.frame.size = CGSize(width: width, height: height)
+    nativeAdView.frame.size = CGSize(width: viewWidth, height: viewHeight)
 
 }
 

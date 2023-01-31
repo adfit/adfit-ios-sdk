@@ -30,11 +30,11 @@ class ViewTypeController: UIViewController, AdFitNativeAdLoaderDelegate, AdFitNa
         
         let viewWidth = view.frame.width // 실제 뷰의 너비
         let leftRightMargin = nativeAdView.bgViewleftMargin + nativeAdView.bgViewRightMargin // 비즈보드 좌우 마진의 합
-        let topBottomMargin = nativeAdView.bgViewTopMargin + nativeAdView.bgViewBottomMargin; // 비즈보드 상하 마진의 합
-        let bizBoardWidth = viewWidth - leftRightMargin; // 뷰의 실제 너비에서 좌우 마진값을 빼주면 비즈보드 너비가 나온다.
-        let bizBoardRatio = 1029.0 / 222.0; // 비즈보드 이미지의 비율
-        let bizBoardHeight = bizBoardWidth / bizBoardRatio; // 비즈보드 너비에서 비율값을 나눠주면 비즈보드 높이를 계산 할 수 있다.
-        let viewHeight = bizBoardHeight + topBottomMargin; // 비즈보드 높이에서 상하 마진값을 더해주면 실제 그려줄 뷰의 높이를 알 수 있다.
+        let topBottomMargin = nativeAdView.bgViewTopMargin + nativeAdView.bgViewBottomMargin // 비즈보드 상하 마진의 합
+        let bizBoardWidth = viewWidth - leftRightMargin // 뷰의 실제 너비에서 좌우 마진값을 빼주면 비즈보드 너비가 나온다.
+        let bizBoardRatio = 1029.0 / 222.0 // 비즈보드 이미지의 비율
+        let bizBoardHeight = bizBoardWidth / bizBoardRatio // 비즈보드 너비에서 비율값을 나눠주면 비즈보드 높이를 계산 할 수 있다.
+        let viewHeight = bizBoardHeight + topBottomMargin // 비즈보드 높이에서 상하 마진값을 더해주면 실제 그려줄 뷰의 높이를 알 수 있다.
         
         nativeAdView.frame.size = CGSize(width: viewWidth, height: viewHeight)
         
