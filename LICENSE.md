@@ -1,8 +1,12 @@
+오픈소스 라이선스
+
 # OSS Notice | Adfit-iOS #
 
 This application is Copyright © Kakao Corp. All rights reserved.
 
 The following sets forth attribution notices for third party software that may be contained in this application.
+
+If you have any questions about these notices, please email us at [opensource@kakaocorp.com][opensource_kakaocorp.com]
 
  **Apple Frameworks**
 
@@ -11,6 +15,14 @@ https://developer.apple.com/documentation
 Copyright 2018 Apple Inc.
 
 Apple MIT License
+
+ **FSPagerView**
+
+https://github.com/WenchaoD/FSPagerView
+
+Copyright 2017 FSPagerView (https://github.com/WenchaoD/FSPagerView)
+
+MIT License
 
  **GzipSwift**
 
@@ -28,6 +40,14 @@ Copyright 2012 Karl Stenerud
 
 MIT License
 
+ **libextobjc**
+
+http://github.com/jspahrsummers/libextobjc/
+
+Copyright Justin Spahr-Summers
+
+MIT License
+
  **Realm Cocoa**
 
 https://github.com/realm/realm-cocoa
@@ -35,6 +55,30 @@ https://github.com/realm/realm-cocoa
 Copyright 2016 Realm Inc.
 
 Apache License 2.0
+
+ **SDWebImage**
+
+https://github.com/SDWebImage/SDWebImage
+
+Copyright 2009-2017 Olivier Poitrey rs@dailymotion.com
+
+MIT License
+
+ **SDWebImageWebPCoder**
+
+https://github.com/SDWebImage/SDWebImageWebPCoder
+
+Copyright 2018 Bogdan Poplauschi
+
+MIT License
+
+ **WebP codec**
+
+https://chromium.googlesource.com/webm/libwebp
+
+Copyright 2010, Google Inc.
+
+BSD 3-Clause "New" or "Revised" License
 
 # Apache License 2.0 #
 
@@ -128,6 +172,22 @@ The Apple Software is provided by Apple on an "AS IS" basis. APPLE MAKES NO WARR
 IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ``````````
 
+# BSD 3-Clause "New" or "Revised" License #
+
+``````````
+Copyright (c)   . All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+   1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+   2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+   3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+``````````
+
 # MIT License #
 
 ``````````
@@ -141,3 +201,6 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ``````````
+
+
+[opensource_kakaocorp.com]: mailto:opensource@kakaocorp.com
