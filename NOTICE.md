@@ -1,3 +1,83 @@
+# OSS Notice | Adfit-SDK-iOS #
+
+This application is Copyright © Kakao Corp. All rights reserved.
+
+The following sets forth attribution notices for third party software that may be contained in this application.
+
+If you have any questions about these notices, please email us at [opensource@kakaocorp.com][opensource_kakaocorp.com]
+
+ **Apple Frameworks**
+
+https://developer.apple.com/documentation
+
+Copyright 2018 Apple Inc.
+
+Apple MIT License
+
+ **FSPagerView**
+
+https://github.com/WenchaoD/FSPagerView
+
+Copyright 2017 FSPagerView (https://github.com/WenchaoD/FSPagerView)
+
+MIT License
+
+ **GzipSwift**
+
+https://github.com/1024jp/GzipSwift/
+
+Copyright 2014-2020 1024jp
+
+MIT License
+
+ **KSCrash**
+
+http://github.com/kstenerud/KSCrash/
+
+Copyright 2012 Karl Stenerud
+
+MIT License
+
+ **libextobjc**
+
+http://github.com/jspahrsummers/libextobjc/
+
+Copyright Justin Spahr-Summers
+
+MIT License
+
+ **Realm Cocoa**
+
+https://github.com/realm/realm-cocoa
+
+Copyright 2016 Realm Inc.
+
+Apache License 2.0
+
+ **SDWebImage**
+
+https://github.com/SDWebImage/SDWebImage
+
+Copyright 2009-2017 Olivier Poitrey rs@dailymotion.com
+
+MIT License
+
+ **SDWebImageWebPCoder**
+
+https://github.com/SDWebImage/SDWebImageWebPCoder
+
+Copyright 2018 Bogdan Poplauschi
+
+MIT License
+
+ **WebP codec**
+
+https://chromium.googlesource.com/webm/libwebp
+
+Copyright 2010, Google Inc.
+
+BSD 3-Clause "New" or "Revised" License
+
 # Apache License 2.0 #
 
 ``````````
