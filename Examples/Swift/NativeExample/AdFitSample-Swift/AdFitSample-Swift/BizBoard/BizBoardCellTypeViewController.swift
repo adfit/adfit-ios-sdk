@@ -31,7 +31,6 @@ class BizBoardCellTypeViewController: UIViewController, UITableViewDataSource, U
         //BizBoardCell.defaultEdgeInset.right = 16
         //BizBoardCell.defaultEdgeInset.top = 16
         //BizBoardCell.defaultEdgeInset.bottom = 16
-        //BizBoardCell.defaultBackgroundColor = .yellow
         
         // 뷰타입과 다르게 셀타입에서는 비즈보드 개별 여백 설정이 아닌 기본 여백 설정값을 이용하였다.
         let leftRightMargin = BizBoardCell.defaultEdgeInset.left + BizBoardCell.defaultEdgeInset.right; // 비즈보드 좌우 마진의 합
@@ -52,7 +51,6 @@ class BizBoardCellTypeViewController: UIViewController, UITableViewDataSource, U
         tableView.register(UINib(nibName: contentCellName, bundle: nil), forCellReuseIdentifier: contentCellName)
         tableView.register(BizBoardCell.self, forCellReuseIdentifier: adCellName)
         
-        //BizBoardCell.defaultBackgroundColor = .yellow
         //BizBoardCell.defaultEdgeInset = UIEdgeInsets(top: 30, left: 20, bottom: 50, right: 20)
         
         tableView.dataSource = self
@@ -167,7 +165,6 @@ class BizBoardCellTypeViewController: UIViewController, UITableViewDataSource, U
             }
         }
         if let cell = cell as? BizBoardCell {
-            //cell.bgViewColor = .yellow
             //cell.bgViewleftMargin = 16
             //cell.bgViewRightMargin = 16
             //cell.bgViewTopMargin = 0

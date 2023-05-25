@@ -26,7 +26,6 @@ class BizBoardViewTypeViewController: UIViewController, AdFitNativeAdLoaderDeleg
         view.addSubview(nativeAdView)
         
         //인스턴스 커스텀
-        //nativeAdView.bgViewColor = .yellow //배경 색 지정
         //nativeAdView.bgViewleftMargin = 16 //좌측 여백
         //nativeAdView.bgViewRightMargin = 16 //우측 여백
         //nativeAdView.bgViewTopMargin = 10 //상측 여백

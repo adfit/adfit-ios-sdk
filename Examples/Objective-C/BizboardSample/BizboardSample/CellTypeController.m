@@ -35,7 +35,6 @@ static NSString * const adCellName = @"BizBoardListFeedAdTableViewCell";
     
     //비즈보드셀 전역 커스텀 설정
     BizBoardCell.defaultEdgeInset = UIEdgeInsetsMake(0, 16, 8, 16); //top, left, bottom, right
-    //BizBoardCell.defaultBackgroundColor = [UIColor redColor];
     
     // 뷰타입과 다르게 셀타입에서는 비즈보드 개별 여백 설정이 아닌 기본 여백 설정값을 이용하였다.
     CGFloat leftRightMargin = BizBoardCell.defaultEdgeInset.left + BizBoardCell.defaultEdgeInset.right; // 비즈보드 좌우 마진의 합
