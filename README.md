@@ -19,7 +19,7 @@
 > SPM 을 지원 합니다. 레포지토리 주소는 다음과 같습니다.<br> (https://github.com/adfit/adfit-spm.git)
 
 ## 지원
-* SDK 연동 가이드 [Wiki](https://github.com/adfit/adfit-ios-sdk/wiki)
+* SDK 연동 가이드 [Guide](http://adfit.github.io/adfit-ios-sdk/)
 * 문의 고객센터 [https://cs.kakao.com/helps?service=160&locale=ko](https://cs.kakao.com/helps?service=160&locale=ko)
 * 사이트/앱 운영 정책 [https://adfit.kakao.com/web/html/use_kakao.html](https://adfit.kakao.com/web/html/use_kakao.html )
 
