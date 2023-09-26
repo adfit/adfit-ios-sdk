@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Banner Ad  Reference</title>
+  <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+  <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+  <link rel="stylesheet" type="text/css" href="css/adfit-custom.css" />
+  <meta charset="utf-8">
+  <script src="js/jquery.min.js" defer></script>
+  <script src="js/jazzy.js" defer></script>
+  
+  <script src="js/lunr.min.js" defer></script>
+  <script src="js/typeahead.jquery.js" defer></script>
+  <script src="js/jazzy.search.js" defer></script>
+  <script src="js/underscore-min.js"></script>
+</head>
+<body>
+
+
+<a title="Banner Ad  Reference"></a>
+
+<header class="header">
+  <p class="header-col header-col--primary">
+    <a class="header-link" href="index.html">
+      AdFitSDK Docs
+    </a>
+    
+  </p>
+
+  <p class="header-col--secondary">
+    <form role="search" action="search.json">
+      <input type="text" placeholder="Search documentation" data-typeahead>
+    </form>
+  </p>
+
+    <p class="header-col header-col--secondary">
+      <a class="header-link" href="http://github.com/adfit/adfit-ios-sdk">
+        <img class="header-icon" src="img/gh.png"/>
+        View on GitHub
+      </a>
+    </p>
+
+</header>
+
+<p class="breadcrumbs">
+  <a class="breadcrumb" href="index.html">AdFitSDK</a>
+  <img class="carat" src="img/carat.png" />
+  <span class="doc_title">Banner Ad</span> 
+</p>
+
+<div class="content-wrapper">
+  <nav class="navigation">
+    <ul class="nav-groups">
+      <li class="nav-group-name">
+        <a class="nav-group-name-link" href="Documentation.html">Documentation</a>
+        <ul class="nav-group-tasks">
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="get-client-id.html">Get Client ID</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="install-sdk.html">Install SDK</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="project-setting.html">Project Setting</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="banner-ad.html">Banner Ad</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>  <article class="main-content">
+
+    <section class="section">
+      <div class="section-content">
+        
+        <h1 id='배너-광고-연동' class='heading'>배너 광고 연동</h1>
+<h2 id='a-name-heading1-a-1-광고-요청하기' class='heading'><a name="heading1"></a> 1. 광고 요청하기</h2>
+
+<h5 class="tab-title" data-tab-name="banner-load">Swift</h5>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">UIKit</span>
+<span class="kd">import</span> <span class="kt">AdFit</span>
+
+<span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+        <span class="k">let</span> <span class="nv">bannerAdView</span> <span class="o">=</span> <span class="kt">AdFitBannerAdView</span><span class="p">(</span><span class="nv">clientId</span><span class="p">:</span> <span class="s">"Input Your ClientId"</span><span class="p">,</span> <span class="nv">adUnitSize</span><span class="p">:</span> <span class="s">"320x50"</span><span class="p">)</span>
+        <span class="n">bannerAdView</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="n">view</span><span class="o">.</span><span class="n">bounds</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">50</span><span class="p">)</span>
+        <span class="n">bannerAdView</span><span class="o">.</span><span class="n">rootViewController</span> <span class="o">=</span> <span class="k">self</span>
+        <span class="n">view</span><span class="o">.</span><span class="nf">addSubView</span><span class="p">(</span><span class="n">bannerAdView</span><span class="p">)</span>
+        <span class="n">bannerAdView</span><span class="o">.</span><span class="nf">loadAd</span><span class="p">()</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+
+<h5 class="tab-title" data-tab-name="banner-load">Objective-C</h5>
+<pre class="highlight objective_c"><code><span class="cp">#import "MyViewController.h"
+#import &lt;AdFit/AdFit-Swift.h&gt;
+</span>
+<span class="k">@implementation</span> <span class="nc">MyViewController</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">super</span> <span class="nf">viewDidLoad</span><span class="p">];</span>
+    <span class="n">AdFitBannerAdView</span> <span class="o">*</span><span class="n">bannerAdView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AdFitBannerAdView</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithClientId</span><span class="p">:</span><span class="s">@"Input Your ClientId"</span> 
+                                                                       <span class="nl">adUnitSize:</span><span class="s">@"320x50"</span><span class="p">];</span>
+    <span class="n">bannerAdView</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="n">f</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="n">f</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="mi">50</span><span class="p">.</span><span class="n">f</span><span class="p">);</span>
+    <span class="n">bannerAdView</span><span class="p">.</span><span class="n">rootViewController</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nf">addSubView</span><span class="p">:</span><span class="n">bannerAdView</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">bannerAdView</span> <span class="nf">loadAd</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="k">@end</span>
+</code></pre>
+<h2 id='a-name-heading2-a-2-배너-속성-설정' class='heading'><a name="heading2"></a> 2. 배너 속성 설정</h2>
+<h3 id='1-rootviewcontroller' class='heading'>1) rootViewController</h3>
+
+<p>배너 광고 클릭시, AdFit SDK에 포함된 웹뷰 컨트롤러가 modal 방식으로 나타나며 광고주 페이지가 노출됩니다.<br>
+이 때 AdFit SDK는 내부적으로 적절한 뷰 컨트롤러를 탐색한 후, 탐색된 뷰 컨트롤러를 통해 광고주 페이지를 노출시킵니다.<br>
+광고주 페이지를 노출시킬 뷰 컨트롤러를 직접 지정하고자 하는 경우, 해당 뷰 컨트롤러 객체를 <code>rootViewController</code> 프로퍼티에 할당해주세요.</p>
+<h3 id='2-delegate' class='heading'>2) delegate</h3>
+
+<p>배너 광고로부터 발생하는 특정 이벤트를 감지하기 위해, <code>delegate</code> 프로퍼티를 활용할 수 있습니다.<br>
+<code>AdFitBannerAdViewDelegate</code> 프로토콜을 구현한 클래스의 객체를 <code>delegate</code> 프로퍼티에 할당해주면 됩니다.<br>
+자세한 사항은 <a href="#heading3"><strong>3. delegate 메서드 구현</strong></a> 항목을 참고해주세요.</p>
+<h2 id='a-name-heading3-a-3-delegate-메서드-구현' class='heading'><a name="heading3"></a> 3. delegate 메서드 구현</h2>
+
+<ul>
+<li><code>AdFitBannerAdViewDelegate</code> 프로토콜을 구현함으로써 광고로부터 발생하는 특정 이벤트를 감지할 수 있습니다.<br>
+광고를 정상적으로 받은 경우, 광고를 받지 못한 경우, 광고가 클릭된 경우에 대한 delegate 메서드를 제공합니다.</li>
+</ul>
+
+<h5 class="tab-title" data-tab-name="banner-delegate">Swift</h5>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">adViewDidReceiveAd</span><span class="p">(</span><span class="n">_</span> <span class="nv">bannerAdView</span><span class="p">:</span> <span class="kt">AdFitBannerAdView</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"didReceiveAd"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">adViewDidFailToReceiveAd</span><span class="p">(</span><span class="n">_</span> <span class="nv">bannerAdView</span><span class="p">:</span> <span class="kt">AdFitBannerAdView</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"didFailToReceiveAd - error :</span><span class="se">\(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">adViewDidClickAd</span><span class="p">(</span><span class="n">_</span> <span class="nv">bannerAdView</span><span class="p">:</span> <span class="kt">AdFitBannerAdView</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"didClickAd"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<h5 class="tab-title" data-tab-name="banner-delegate">Objective-C</h5>
+<pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adViewDidReceiveAd</span><span class="p">:(</span><span class="n">AdFitBannerAdView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerAdView</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"didReceiveAd"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adViewDidFailToReceiveAd</span><span class="p">:(</span><span class="n">AdFitBannerAdView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerAdView</span> <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"didFailToReceiveAd - error = %@"</span><span class="p">,</span> <span class="p">[</span><span class="n">error</span> <span class="nf">localizedDescription</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adViewDidClickAd</span><span class="p">:(</span><span class="n">AdFitBannerAdView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerAdView</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"didClickAd"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='a-name-heading4-a-4-에러-코드' class='heading'><a name="heading4"></a> 4. 에러 코드</h2>
+
+<p>광고 수신에 실패한 경우, <code>adViewDidFailToReceiveAd</code> delegate 메서드를 통해 에러 객체를 전달받을 수 있습니다.<br>
+각각의 에러에 대한 설명은 아래 표를 참고해주세요.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">코드</th>
+<th>메시지</th>
+<th>설명</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1</td>
+<td>clientId property is nil</td>
+<td>AdFitBannerAdView 객체에 clientId가 세팅되지 않은 경우.</td>
+</tr>
+<tr>
+<td style="text-align: center">2</td>
+<td>no ad to show</td>
+<td>노출 가능한 광고가 없는 경우. 잠시 후 다시 광고 요청을 시도해주세요.</td>
+</tr>
+<tr>
+<td style="text-align: center">3</td>
+<td>invalid ad received</td>
+<td>유효하지 않은 광고를 받은 경우. AdFit에 문의해주세요.</td>
+</tr>
+<tr>
+<td style="text-align: center">4</td>
+<td>failed to render ad</td>
+<td>AdFitBannerAdView 객체의 사이즈가 기준 사이즈보다 작은 경우.</td>
+</tr>
+<tr>
+<td style="text-align: center">5</td>
+<td>attempted to load ad too frequently</td>
+<td>과도하게 짧은 시간 간격(30초 이내)으로 광고를 재요청한 경우.</td>
+</tr>
+<tr>
+<td style="text-align: center">6</td>
+<td>HTTP failed</td>
+<td>HTTP 에러. 계속해서 반복 발생하는 경우 AdFit에 문의해주세요.</td>
+</tr>
+</tbody></table>
+
+      </div>
+    </section>
+
+
+  </article>
+</div>
+<section class="footer">
+  <p>Copyright 2020 © Kakao Corp. All Rights Reserved.</p>
+  <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+</section>
+
+<script src="js/adfit-custom.js"></script>
+</body>
+</html>

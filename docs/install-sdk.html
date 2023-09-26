@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AdFitSDK  Reference</title>
+  <title>Install SDK  Reference</title>
   <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
   <link rel="stylesheet" type="text/css" href="css/highlight.css" />
   <link rel="stylesheet" type="text/css" href="css/adfit-custom.css" />
@@ -17,7 +17,7 @@
 <body>
 
 
-<a title="AdFitSDK  Reference"></a>
+<a title="Install SDK  Reference"></a>
 
 <header class="header">
   <p class="header-col header-col--primary">
@@ -45,7 +45,7 @@
 <p class="breadcrumbs">
   <a class="breadcrumb" href="index.html">AdFitSDK</a>
   <img class="carat" src="img/carat.png" />
-  <span class="doc_title">AdFitSDK</span> 
+  <span class="doc_title">Install SDK</span> 
 </p>
 
 <div class="content-wrapper">
@@ -74,39 +74,34 @@
     <section class="section">
       <div class="section-content">
         
-        <h1 id='adfit-ios-sdk' class='heading'>AdFit iOS SDK</h1>
-
-<p>이 가이드는 iOS Application 에 모바일 광고를 노출하기 위한 광고 데이터요청과 처리 방법을 설명합니다.<br>
-사이트/앱 운영정책에 어긋나는 경우 적립금 지급이 거절 될 수 있으니 유의하시기 바랍니다.</p>
-
-<ul>
-<li>문의 고객센터 <a href="https://cs.kakao.com/helps?service=160&locale=ko">https://cs.kakao.com/helps?service=160&amp;locale=ko</a></li>
-<li>사이트/앱 운영 정책 <a href="https://adfit.kakao.com/web/html/use_kakao.html">https://adfit.kakao.com/web/html/use_kakao.html</a></li>
-</ul>
-<h2 id='지원-환경' class='heading'>지원 환경</h2>
-
-<p>AdFitSDK는 Swift 기반으로 개발되었습니다.<br>
-Swift 기반의 프로젝트에서 AdFitSDK를 사용하시려면, 반드시 최신 버전의 Xcode를 사용해주세요.</p>
+        <h1 id='sdk-설치하기' class='heading'>SDK 설치하기</h1>
+<h2 id='1-cocoapods-사용하여-설치' class='heading'>1. Cocoapods 사용하여 설치</h2>
+<h4 id='1-프로젝트의-podfile-에-pod-추가' class='heading'>1) 프로젝트의 Podfile 에 pod 추가</h4>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'AdFitSDK'</span>
+</code></pre>
+<h4 id='2-터미널에서-pod-install-명령을-실행' class='heading'>2) 터미널에서 pod install 명령을 실행</h4>
+<h2 id='2-수동-설치' class='heading'>2. 수동 설치</h2>
 
 <ul>
-<li><a href="https://developer.apple.com/xcode/">최신 버전의 Xcode</a> (Xcode 13. / Swift 5.0)</li>
-<li>iOS Deployment Target: iOS 12.0 이상</li>
+<li>AdFitSDK를 <a href="https://github.com/adfit/adfit-ios-sdk/archive/master.zip">다운로드</a> 받습니다.</li>
+<li><code>AdFit.framework</code> 을 앱 프로젝트의 <code>General &gt; Embeded Binaries</code> 항목으로 끌어서 놓습니다.</li>
 </ul>
-<h2 id='license' class='heading'>License</h2>
+<h4 id='1-앱스토어에-앱-업로드-시-strong-unsupported-architectures-strong-에러-발생하는-경우' class='heading'>1) 앱스토어에 앱 업로드 시 <strong>Unsupported Architectures</strong> 에러 발생하는 경우</h4>
 
-<p>Copyright 2020 © Kakao Corp. All Rights Reserved.</p>
+<p>AdFit SDK는 개발 편의를 위해 시뮬레이터용 / 실기기용 바이너리가 하나로 합쳐진 fat binary 형태로 제공됩니다.<br>
+따라서 AdFit SDK를 수동으로 설치한 경우, 앱스토어에 앱을 업로드 할 때 <code>Unsupported Architectures</code> 에러가 발생할 수 있습니다.<br>
+이러한 경우 다음의 안내를 따라주세요.</p>
 
-<p>Licensed under the Apache License, Version 2.0 (the &ldquo;License&rdquo;);
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at</p>
-
-<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
-
-<p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an &ldquo;AS IS&rdquo; BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</p>
+<ul>
+<li>Xcode에서 앱 프로젝트를 선택하고, <code>Build Phases</code> 탭으로 이동합니다.</li>
+<li>메인 영역 좌측 상단의 <code>+</code> 버튼을 클릭 후 <code>New Run Script Phase</code> 항목을 선택합니다.</li>
+<li>추가된 <code>Run Script</code> 항목의 입력 폼에 다음 코드를 복사해서 붙여넣습니다.</li>
+<li><code>Run Script</code> 항목은 <code>Embed Frameworks</code> 항목 보다 아래에 위치해 있어야 합니다. 항목의 순서는 Drag&amp;Drop 을 통해 변경할 수 있습니다.</li>
+<li><code>Run Script</code>의 세부 옵션 중 <code>Run script only when installing</code> 을 체크할 경우 아카이브 시에만 스크립트가 수행 됩니다. 해당 스크립트는
+아카이브시에만 수행되면 되므로 평상시에 Build 시간을 줄일 수 있습니다.</li>
+</ul>
+<pre class="highlight plaintext"><code>bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/AdFit.framework/strip-frameworks.sh"
+</code></pre>
 
       </div>
     </section>
