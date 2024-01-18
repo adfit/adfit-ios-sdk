@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>SKAdNetworkItems</key>
+	<dict>
+		<key>Item 0</key>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>9t245vhmpl.skadnetwork</string>
+		</dict>
+		<key>Item 1</key>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>v72qych5uu.skadnetwork</string>
+		</dict>
+		<key>Item 2</key>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>x8uqf25wch.skadnetwork</string>
+		</dict>
+		<key>Item 3</key>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>8s468mfl3y.skadnetwork</string>
+		</dict>
+		<key>Item 4</key>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>54NZKQM89Y.skadnetwork</string>
+		</dict>
+		<key>Item 5</key>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>t6d3zquu66.skadnetwork</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
