@@ -1,5 +1,13 @@
 # AdFit iOS SDK
 
+> AdFit SDK 3.14.7 버전부터, iOS 최소 지원 버전이 14.0으로 상향되었습니다.
+
+> AdFit SDK 3.14.7 버전부터 Swift 5.9(xcode 15)를 지원하며, xcode 15를 이용하시길 바랍니다.
+
+> AdFit SDK 3.14.7 버전부터 First Party API 사용 사유가 명시되었습니다. 
+
+> 자세한 내용은 [애플 공식 문서](https://developer.apple.com/kr/news/?id=z6fu1dcu&mibextid=S66gvF) 를 참고 부탁드립니다.
+
 > AdFit SDK 3.12.19 버전부터 Cocoapod 으로 제공되는 프레임워크 형태가 xcframework로 변경되었습니다.  
 
 > AdFit SDK 3.12.18 버전부터 iOS 최소 지원 버전이 13.0으로 상향 되었습니다. 13.0 미만의 iOS 버전을
@@ -22,6 +30,9 @@
 * SDK 연동 가이드 [Guide](http://adfit.github.io/adfit-ios-sdk/documentation/adfitdocs)
 * 문의 고객센터 [https://cs.kakao.com/helps?service=160&locale=ko](https://cs.kakao.com/helps?service=160&locale=ko)
 * 사이트/앱 운영 정책 [https://adfit.kakao.com/web/html/use_kakao.html](https://adfit.kakao.com/web/html/use_kakao.html )
+
+## First Party API 사용 사유 명시
+* 애플 공식 문서 [https://developer.apple.com/kr/news/?id=z6fu1dcu&mibextid=S66gvF](https://developer.apple.com/kr/news/?id=z6fu1dcu&mibextid=S66gvF)
 
 ## iOS14 개인정보 보호 정책 안내사항
 * 12월 8일 이후에 신규, 업데이트 되는 앱들은 해당 사항을 모두 기재해야 합니다. ([App Store Connect에서 사용할 수 있는 앱 개인정보 보호에 관한 질문](https://developer.apple.com/kr/news/?id=vlj9jty9))
