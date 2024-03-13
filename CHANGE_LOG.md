@@ -3,6 +3,9 @@
 ## v3.14.7
 * First Party API 사용 사유 명시
                     
+## v3.14.7
+* First Party API 사용 사유 명시
+                    
 ## v3.14.2
 * 버그 수정 및 코드 안정화
 
