@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		270EECBB296572CB00DD60DB /* AdFitSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 270EECBA296572CB00DD60DB /* AdFitSDK */; };
+		C221654E286EBE4E00EAC43D /* BizBoardViewTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C221654D286EBE4E00EAC43D /* BizBoardViewTypeViewController.swift */; };
+		C2216550286EBE6100EAC43D /* BizBoardCellTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C221654F286EBE6100EAC43D /* BizBoardCellTypeViewController.swift */; };
+		C2216552286EC6BC00EAC43D /* BizBoardViewTypeVCRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2216551286EC6BC00EAC43D /* BizBoardViewTypeVCRepresentable.swift */; };
+		C2216554286EC6DD00EAC43D /* BizBoardCellTypeVCRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2216553286EC6DD00EAC43D /* BizBoardCellTypeVCRepresentable.swift */; };
+		C2216557286ECD4F00EAC43D /* ContentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2216556286ECD4F00EAC43D /* ContentsCell.swift */; };
+		C2216559286ECDE200EAC43D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2216558286ECDE200EAC43D /* Message.swift */; };
+		C221655B286ECE8F00EAC43D /* ContentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C221655A286ECE8F00EAC43D /* ContentsCell.xib */; };
+		C221655D286EDA7900EAC43D /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C221655C286EDA7900EAC43D /* Contents.swift */; };
+		C23EF591246E85860022236F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EF590246E85860022236F /* AppDelegate.swift */; };
+		C23EF593246E85860022236F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EF592246E85860022236F /* SceneDelegate.swift */; };
+		C23EF595246E85860022236F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EF594246E85860022236F /* ContentView.swift */; };
+		C23EF597246E85880022236F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23EF596246E85880022236F /* Assets.xcassets */; };
+		C23EF59A246E85880022236F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23EF599246E85880022236F /* Preview Assets.xcassets */; };
+		C23EF59D246E85880022236F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23EF59B246E85880022236F /* LaunchScreen.storyboard */; };
+		C23EF5A8247022910022236F /* BannerAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EF5A7247022910022236F /* BannerAdViewController.swift */; };
+		C23EF5AD2470229A0022236F /* MyNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23EF5AA2470229A0022236F /* MyNativeAdView.xib */; };
+		C23EF5AE2470229A0022236F /* MyNativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EF5AB2470229A0022236F /* MyNativeAdView.swift */; };
+		C23EF5AF2470229A0022236F /* NativeAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EF5AC2470229A0022236F /* NativeAdViewController.swift */; };
+		C23EF5B62470259D0022236F /* BannerAdVCRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EF5B52470259D0022236F /* BannerAdVCRepresentable.swift */; };
+		C23EF5B824702BC20022236F /* NativeAdVCRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EF5B724702BC20022236F /* NativeAdVCRepresentable.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C23EF5B4247023680022236F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C221654D286EBE4E00EAC43D /* BizBoardViewTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizBoardViewTypeViewController.swift; sourceTree = "<group>"; };
+		C221654F286EBE6100EAC43D /* BizBoardCellTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizBoardCellTypeViewController.swift; sourceTree = "<group>"; };
+		C2216551286EC6BC00EAC43D /* BizBoardViewTypeVCRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizBoardViewTypeVCRepresentable.swift; sourceTree = "<group>"; };
+		C2216553286EC6DD00EAC43D /* BizBoardCellTypeVCRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizBoardCellTypeVCRepresentable.swift; sourceTree = "<group>"; };
+		C2216556286ECD4F00EAC43D /* ContentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsCell.swift; sourceTree = "<group>"; };
+		C2216558286ECDE200EAC43D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		C221655A286ECE8F00EAC43D /* ContentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentsCell.xib; sourceTree = "<group>"; };
+		C221655C286EDA7900EAC43D /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
+		C23EF58D246E85860022236F /* AdFitSample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdFitSample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C23EF590246E85860022236F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C23EF592246E85860022236F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C23EF594246E85860022236F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C23EF596246E85880022236F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C23EF599246E85880022236F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C23EF59C246E85880022236F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C23EF59E246E85880022236F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C23EF5A7247022910022236F /* BannerAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAdViewController.swift; sourceTree = "<group>"; };
+		C23EF5AA2470229A0022236F /* MyNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyNativeAdView.xib; sourceTree = "<group>"; };
+		C23EF5AB2470229A0022236F /* MyNativeAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNativeAdView.swift; sourceTree = "<group>"; };
+		C23EF5AC2470229A0022236F /* NativeAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdViewController.swift; sourceTree = "<group>"; };
+		C23EF5B52470259D0022236F /* BannerAdVCRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdVCRepresentable.swift; sourceTree = "<group>"; };
+		C23EF5B724702BC20022236F /* NativeAdVCRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdVCRepresentable.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C23EF58A246E85860022236F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				270EECBB296572CB00DD60DB /* AdFitSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C221654C286EB71400EAC43D /* BizBoard */ = {
+			isa = PBXGroup;
+			children = (
+				C2216555286ECD2F00EAC43D /* contents */,
+				C221654D286EBE4E00EAC43D /* BizBoardViewTypeViewController.swift */,
+				C221654F286EBE6100EAC43D /* BizBoardCellTypeViewController.swift */,
+				C2216551286EC6BC00EAC43D /* BizBoardViewTypeVCRepresentable.swift */,
+				C2216553286EC6DD00EAC43D /* BizBoardCellTypeVCRepresentable.swift */,
+			);
+			path = BizBoard;
+			sourceTree = "<group>";
+		};
+		C2216555286ECD2F00EAC43D /* contents */ = {
+			isa = PBXGroup;
+			children = (
+				C221655C286EDA7900EAC43D /* Contents.swift */,
+				C221655A286ECE8F00EAC43D /* ContentsCell.xib */,
+				C2216556286ECD4F00EAC43D /* ContentsCell.swift */,
+				C2216558286ECDE200EAC43D /* Message.swift */,
+			);
+			path = contents;
+			sourceTree = "<group>";
+		};
+		C23EF584246E85860022236F = {
+			isa = PBXGroup;
+			children = (
+				C23EF58F246E85860022236F /* AdFitSample-Swift */,
+				C23EF58E246E85860022236F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C23EF58E246E85860022236F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C23EF58D246E85860022236F /* AdFitSample-Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C23EF58F246E85860022236F /* AdFitSample-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				C23EF5A6247022910022236F /* BannerAd */,
+				C23EF5A92470229A0022236F /* NativeAd */,
+				C221654C286EB71400EAC43D /* BizBoard */,
+				C23EF590246E85860022236F /* AppDelegate.swift */,
+				C23EF592246E85860022236F /* SceneDelegate.swift */,
+				C23EF594246E85860022236F /* ContentView.swift */,
+				C23EF596246E85880022236F /* Assets.xcassets */,
+				C23EF59B246E85880022236F /* LaunchScreen.storyboard */,
+				C23EF59E246E85880022236F /* Info.plist */,
+				C23EF598246E85880022236F /* Preview Content */,
+			);
+			path = "AdFitSample-Swift";
+			sourceTree = "<group>";
+		};
+		C23EF598246E85880022236F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C23EF599246E85880022236F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C23EF5A6247022910022236F /* BannerAd */ = {
+			isa = PBXGroup;
+			children = (
+				C23EF5A7247022910022236F /* BannerAdViewController.swift */,
+				C23EF5B52470259D0022236F /* BannerAdVCRepresentable.swift */,
+			);
+			path = BannerAd;
+			sourceTree = "<group>";
+		};
+		C23EF5A92470229A0022236F /* NativeAd */ = {
+			isa = PBXGroup;
+			children = (
+				C23EF5AA2470229A0022236F /* MyNativeAdView.xib */,
+				C23EF5AB2470229A0022236F /* MyNativeAdView.swift */,
+				C23EF5AC2470229A0022236F /* NativeAdViewController.swift */,
+				C23EF5B724702BC20022236F /* NativeAdVCRepresentable.swift */,
+			);
+			name = NativeAd;
+			path = "AdFitSample-Swift/NativeAd";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C23EF58C246E85860022236F /* AdFitSample-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C23EF5A1246E85880022236F /* Build configuration list for PBXNativeTarget "AdFitSample-Swift" */;
+			buildPhases = (
+				C23EF589246E85860022236F /* Sources */,
+				C23EF58A246E85860022236F /* Frameworks */,
+				C23EF58B246E85860022236F /* Resources */,
+				C23EF5B4247023680022236F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AdFitSample-Swift";
+			packageProductDependencies = (
+				270EECBA296572CB00DD60DB /* AdFitSDK */,
+			);
+			productName = "AdFitSample-Swift";
+			productReference = C23EF58D246E85860022236F /* AdFitSample-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C23EF585246E85860022236F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1330;
+				ORGANIZATIONNAME = KAKAO;
+				TargetAttributes = {
+					C23EF58C246E85860022236F = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = C23EF588246E85860022236F /* Build configuration list for PBXProject "AdFitSample-Swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C23EF584246E85860022236F;
+			packageReferences = (
+				270EECB9296572CB00DD60DB /* XCRemoteSwiftPackageReference "adfit-spm" */,
+			);
+			productRefGroup = C23EF58E246E85860022236F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C23EF58C246E85860022236F /* AdFitSample-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C23EF58B246E85860022236F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23EF5AD2470229A0022236F /* MyNativeAdView.xib in Resources */,
+				C221655B286ECE8F00EAC43D /* ContentsCell.xib in Resources */,
+				C23EF59D246E85880022236F /* LaunchScreen.storyboard in Resources */,
+				C23EF59A246E85880022236F /* Preview Assets.xcassets in Resources */,
+				C23EF597246E85880022236F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C23EF589246E85860022236F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2216552286EC6BC00EAC43D /* BizBoardViewTypeVCRepresentable.swift in Sources */,
+				C221655D286EDA7900EAC43D /* Contents.swift in Sources */,
+				C2216557286ECD4F00EAC43D /* ContentsCell.swift in Sources */,
+				C23EF5AE2470229A0022236F /* MyNativeAdView.swift in Sources */,
+				C23EF5B824702BC20022236F /* NativeAdVCRepresentable.swift in Sources */,
+				C221654E286EBE4E00EAC43D /* BizBoardViewTypeViewController.swift in Sources */,
+				C2216554286EC6DD00EAC43D /* BizBoardCellTypeVCRepresentable.swift in Sources */,
+				C2216550286EBE6100EAC43D /* BizBoardCellTypeViewController.swift in Sources */,
+				C23EF591246E85860022236F /* AppDelegate.swift in Sources */,
+				C23EF5B62470259D0022236F /* BannerAdVCRepresentable.swift in Sources */,
+				C23EF5A8247022910022236F /* BannerAdViewController.swift in Sources */,
+				C23EF593246E85860022236F /* SceneDelegate.swift in Sources */,
+				C23EF5AF2470229A0022236F /* NativeAdViewController.swift in Sources */,
+				C23EF595246E85860022236F /* ContentView.swift in Sources */,
+				C2216559286ECDE200EAC43D /* Message.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C23EF59B246E85880022236F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C23EF59C246E85880022236F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C23EF59F246E85880022236F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C23EF5A0246E85880022236F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C23EF5A2246E85880022236F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AdFitSample-Swift/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Frameworks";
+				INFOPLIST_FILE = "AdFitSample-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kakao.biz.AdFitSample-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Debug;
+		};
+		C23EF5A3246E85880022236F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AdFitSample-Swift/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Frameworks";
+				INFOPLIST_FILE = "AdFitSample-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kakao.biz.AdFitSample-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C23EF588246E85860022236F /* Build configuration list for PBXProject "AdFitSample-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C23EF59F246E85880022236F /* Debug */,
+				C23EF5A0246E85880022236F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C23EF5A1246E85880022236F /* Build configuration list for PBXNativeTarget "AdFitSample-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C23EF5A2246E85880022236F /* Debug */,
+				C23EF5A3246E85880022236F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		270EECB9296572CB00DD60DB /* XCRemoteSwiftPackageReference "adfit-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adfit/adfit-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.14.18;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		270EECBA296572CB00DD60DB /* AdFitSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 270EECB9296572CB00DD60DB /* XCRemoteSwiftPackageReference "adfit-spm" */;
+			productName = AdFitSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C23EF585246E85860022236F /* Project object */;
+}
