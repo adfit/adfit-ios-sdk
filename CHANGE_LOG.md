@@ -1,5 +1,8 @@
 # 변경이력
 
+## v3.21.24
+- liquid glass 대응
+
 ## v3.21.20
 - SKAN 광고일 경우, click delegate가 전달되지 않는 현상 수정 (네이티브 광고)
 
